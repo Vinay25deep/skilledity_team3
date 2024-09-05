@@ -1,12 +1,12 @@
-import Navbar from './components/Navbar';
-import SchoolLogin from './components/SchoolLogin';
-import './App.css';
+import Navbar from "./components/Navbar";
+import "./App.css";
+import LoginPortal from "./components/LoginPortal";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <SchoolLogin />
+      <LoginPortal />
     </div>
   );
 }

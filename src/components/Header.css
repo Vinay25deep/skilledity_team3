@@ -1,62 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 
 .header{
-    position: sticky;
+    position: fixed;
     top:0;
     left:0;
-    z-index: 999;
+    z-index: 1;
+    margin: 0 auto;
     width: 100%;
-    padding:0px;
-    height: 6.82%;
-    gap: 0px;
+    height: 40px;
+    padding: 1rem;
     border: 0px 0px 1px 0px;
-    opacity: 0px;
-    background: #FCFCFC;
-    font-family: 'Montserrat';
+    background:#F6F7FA;
+    /* backdrop-filter: blur(14px); */
     border-bottom: 2px solid #DEE5F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
   }
   
   .Navbar {
-      margin-left:14%;
-      margin-top:9px;
-      margin-bottom:9px;
-      display: flex;
-      justify-content: space-between;
-      /* background-color: #55679C; */
-      
-      width:100%;
-      width: 81.3%;
-      height: Hug (50px)px;
-      gap: 0px;
-      opacity: 0px;
-      z-index: 1000;
-      
-  
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
     }
     
     .logo {
       display: flex;
       align-items:center;
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 600;
       color: #000;
     }
     
     .buttons button {
-      margin-left: 10px;
-      font-family: 'Montserrat';
-      padding: 13px 52px 13px 52px;
+      padding: 0.6rem 3rem;
       border-radius: 4px;
-      cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
+      font-family: Montserrat;
       font-weight: 400;
     }
-    .buttons{
-        margin-right: 200px;
-    }
-    
+
     .login {
       background-color:black;
       color: #f0f0f0;
