@@ -8,7 +8,7 @@ function Header() {
         <div className="logo">skilledity</div>
         <div className="buttons">
           <a href="/LoginPortal">
-            <button className="login">Login</button>
+            <button className="login">Login </button>
           </a>
         </div>
       </div>
