@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
 .header{
     position: fixed;
     top:0;
@@ -28,8 +30,9 @@
     .logo {
       display: flex;
       align-items:center;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 600;
+      font-family: Mooli;
       color: #000;
     }
     
