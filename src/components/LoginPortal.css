@@ -111,7 +111,7 @@
 
   @media only screen and (max-width:768px) {
     .hero-content h1{
-      max-width: 500px
+      max-width: 500px;
     }
     .sub-card{
       /* width: 0; */

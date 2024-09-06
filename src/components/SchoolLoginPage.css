@@ -1,17 +1,17 @@
 /* Basic layout */
 .login-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
     padding: 0 50px;
     background-color: #f5f5f5;
-    
   }
   
   .login-form {
+    margin-top:3%;
     height:430px;
-    width: 40%;
+    width: 27%;
     background: #fff;
     padding: 40px 60px 40px 60px;
     border-radius: 10px;
@@ -58,7 +58,14 @@
     border: 1px solid #DEE5F8;
     border-radius: 1.8px;
     margin-bottom: 10px;
+    height:1.5rem;
   }
+
+  input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border: 1px solid #DEE5F8; /* Optional: You can add a custom border color when focused */
+}
 
   ::placeholder{
     font-family:'Montserrat';
@@ -79,6 +86,7 @@
   }
   
   button {
+    font-family: 'montserrat';
     width: 100%;
     padding: 12px;
     background-color: #000;
@@ -94,15 +102,57 @@
   }
   
   .login-image {
+    margin-top:3%;
     width: 50%;
     text-align: center;
+    padding:10px;
   }
   
   .login-image img {
-    width: 300px;
-height: 400.17px;
-gap: 0px;
-opacity: 0px;
+    width: 350px;
+    height: 466.86px;
+    gap: 0px;
+    opacity: 0px;
 
+  }
+
+  @media (max-width: 480px) {
+    .login-form {
+      padding: 25px;
+      width:100%;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .login-image{
+      width:0;
+      height:0;
+      padding:0;
+    }
+    
+
+    .login-image img {
+      display: none; 
+      width:0;
+      height:0;/* Hide the image on very small screens if necessary */
+    }
   }
   

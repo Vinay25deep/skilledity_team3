@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginPortal.css";
 
 function LoginPortal() {
+  const navigate = useNavigate()
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -24,7 +26,7 @@ function LoginPortal() {
             <h2 className="card-title">Student Login</h2>
             <p className="card-text">Accessing your student portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
+          <a href="/student-login">
             <button className="btnLogin">Login</button>
           </a>
         </div>
@@ -39,8 +41,8 @@ function LoginPortal() {
             <h2 className="card-title">School Login</h2>
             <p className="card-text">Accessing your school portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
-            <button className="btnLogin">Login</button>
+          <a href="/school-login">
+            <button  onClick={() => navigate('school-login')} className="btnLogin">Login</button>
           </a>
         </div>
         <div className="sub-card">
@@ -54,7 +56,7 @@ function LoginPortal() {
             <h2 className="card-title">Admin Login</h2>
             <p className="card-text">Accessing your admin portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
+          <a href="/admin-login">
             <button className="btnLogin">Login</button>
           </a>
         </div>

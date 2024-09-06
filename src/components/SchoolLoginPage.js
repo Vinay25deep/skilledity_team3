@@ -1,11 +1,11 @@
 import React from 'react';
-import './SchoolLoginPage.css'; // Add CSS for styling the page
+import './SchoolLoginPage.css'; 
 
 const SchoolLoginPage = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h1>Welcome!</h1>
+        <h1>Welcome!</h1>  
         <h3>Sign in to</h3>
         <p> the School Login portal</p>
         <div>
@@ -22,7 +22,7 @@ const SchoolLoginPage = () => {
             <input type="checkbox" id="remember-me" />
             <label id="rememberme" htmlFor="remember-me">Remember Me</label>
           </div>
-          <button type="submit">Log in</button>
+          <button type="submit">Login</button>
         </form>
         </div>
       </div>
