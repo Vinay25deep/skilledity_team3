@@ -17,13 +17,13 @@ function LoginPortal() {
       <div className="card">
         <div className="sub-card">
           <img
-            src="./SVGs/undraw_exams_re_4ios.svg"
+            src="./SVGs/undraw_teacher_re_sico.svg"
             alt="student"
             className="card-img"
             draggable="false"
           ></img>
           <div className="sub-card-text">
-            <h2 className="card-title">Student Login</h2>
+            <h2 className="card-title">Student Login</h2> 
             <p className="card-text">Accessing your student portal.</p>
           </div>
           <a href="/student-login">
@@ -47,7 +47,7 @@ function LoginPortal() {
         </div>
         <div className="sub-card">
           <img
-            src="./SVGs/undraw_add_information_j2wg.svg"
+            src="./SVGs/undraw_teaching_re_g7e3.svg"
             alt=""
             className="card-img"
             draggable="false"

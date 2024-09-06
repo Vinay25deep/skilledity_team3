@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import './SchoolLoginPage.css'; 
 
+
 const SchoolLoginPage = () => {
+  const navigate = useNavigate()
   return (
     <div className="login-container">
       <div className="login-form">
@@ -18,11 +21,19 @@ const SchoolLoginPage = () => {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" placeholder="Enter your Password" />
           </div>
-          <div className="form-group2">
-            <input type="checkbox" id="remember-me" />
-            <label id="rememberme" htmlFor="remember-me">Remember Me</label>
+          <div className="form-group-inline">
+            <div className="remember-me">
+              <input type="checkbox" id="remember-me" />
+              <label htmlFor="remember-me">Remember Me</label>
+            </div>
+            <div className="forgot-password">
+              <a href="/forgot-password">Forgot Password?</a>
+            </div>
           </div>
-          <button type="submit">Login</button>
+          <button type="submit" onClick={(e) => {
+              e.preventDefault(); 
+              const schoolName = "Apeejay School, NOIDA"; // sample school name
+              navigate('/dashboard', { state: { schoolName } });}}>Login</button>
         </form>
         </div>
       </div>

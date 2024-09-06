@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import LoginPortal from "./components/LoginPortal";
 import SchoolLoginPage from "./components/SchoolLoginPage";
+import Dashboard from "./components/Dashboard";
 import { DataProvider } from './context/dataContext';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path='/' element={<LoginPortal />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
+            <Route path="dashboard" element={<Dashboard />} />
           </Routes>
         </div>
       </BrowserRouter>

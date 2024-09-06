@@ -1,0 +1,87 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin-left:10%;
+    margin-top: 13%;
+    
+    
+  }
+  
+  .dashboard-header {
+    text-align: left;
+    margin-bottom: 40px;
+
+  }
+  
+  .dashboard-header h1 {
+    font-size: 36px;
+    margin: 0;
+    
+  }
+  .school-name{
+    font-size: 20px;
+  color: black;
+  margin-top: 10px;
+  
+  }
+  .dashboard-header h1 span {
+    color: #55679C; 
+  }
+  
+  .dashboard-header p {
+    font-size: 20px;
+    color: black;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .dashboard-content .card {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 100px 30px 100px;
+    text-align: center;
+    width: 250px;
+    justify-content: center;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+  }
+  .dashboard-content .card:hover {
+    border-color: #98A8D7; /* Only change the color, not the width */
+    box-shadow: rgba(0, 0, 0, 0.08);
+  }
+  
+  .dashboard-content .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-content .card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    
+  }
+  
+  .dashboard-content .btn {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dashboard-content .btn:hover {
+    background-color: rgba(4, 8, 27, 0.85);
+
+  }
+  
