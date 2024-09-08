@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginPortal.css";
-
+import { Link } from "react-router-dom";
 function LoginPortal() {
   return (
     <section className="hero-section">
@@ -24,9 +24,9 @@ function LoginPortal() {
             <h2 className="card-title">Student Login</h2>
             <p className="card-text">Accessing your student portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
+          <Link to="/SchoolLoginPage">
             <button className="btnLogin">Login</button>
-          </a>
+          </Link>
         </div>
         <div className="sub-card">
           <img
@@ -39,9 +39,9 @@ function LoginPortal() {
             <h2 className="card-title">School Login</h2>
             <p className="card-text">Accessing your school portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
+          <Link to="/SchoolLoginPage">
             <button className="btnLogin">Login</button>
-          </a>
+          </Link>
         </div>
         <div className="sub-card">
           <img
@@ -54,9 +54,9 @@ function LoginPortal() {
             <h2 className="card-title">Admin Login</h2>
             <p className="card-text">Accessing your admin portal.</p>
           </div>
-          <a href="/SchoolLoginPage">
+          <Link to="/SchoolLoginPage">
             <button className="btnLogin">Login</button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
