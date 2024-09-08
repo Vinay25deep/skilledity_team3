@@ -1,13 +1,14 @@
-
+body{
+  overflow: hidden;
+}
 
 .hero-section {
-    margin: 8rem 0rem;
+    margin: 6.5em 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
     gap:2rem;  
-    
   }
   
   .hero-content {
@@ -108,16 +109,26 @@
   background-color: rgba(4, 8, 27, 0.85);
 }
 
+@media only screen and (max-width:1160px) {
+  body{
+    overflow:auto;
+  }
+}
 
   @media only screen and (max-width:768px) {
     .hero-content h1{
       max-width: 500px;
     }
-   
+    body{
+      overflow:auto;
+    }
   }
 
   @media only screen and (max-width:425px) {
     .hero-content h1{
       font-size: 2rem;
+    }
+    body{
+      overflow:auto;
     }
   }
