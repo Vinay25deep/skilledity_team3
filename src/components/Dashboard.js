@@ -16,15 +16,22 @@ function Dashboard() {
 
       <div className="dashboard-content">
         <div className="card">
+        <div className='h2-p'>
           <h2>Student Details</h2>
           <p>Click the button below to edit student details</p>
+          </div>
           <button className="btn" onClick={() => navigate('/details-student')}>Details</button>
         </div>
 
         <div className="card">
+        <div className='h2-p'>
           <h2>Register Student</h2>
           <p>Click the button below to register the student</p>
-          <button className="btn" onClick={() => navigate('/register-student')}>Register</button>
+          </div>
+          <div className='button-group'>
+          <button className="btn-csv" onClick={() => navigate('/upload-csv')}>Upload CSV</button>
+          <button className="btn-manual" onClick={() => navigate('/manual-register-student')}>Manual</button>
+          </div>
         </div>
       </div>
     </div>

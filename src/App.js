@@ -6,6 +6,8 @@ import SchoolLoginPage from "./components/SchoolLoginPage";
 import Dashboard from "./components/Dashboard";
 import ForgotPasswordPage from "./components/ForgortPasswordPage";
 import { DataProvider } from './context/dataContext';
+import UploadCSV from './components/UploadCSV';
+
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="upload-csv" element={<UploadCSV />} />
+
           </Routes>
         </div>
       </BrowserRouter>
