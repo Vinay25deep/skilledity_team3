@@ -132,3 +132,22 @@ body{
       overflow:auto;
     }
   }
+
+  @media only screen and (max-width:360px) {
+    .card .card-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: hsla(0, 0%, 20%);
+      margin-bottom:10px;
+  }
+  .card-text{
+    text-align: center;
+  }
+    .sub-card{
+      width:80%;
+    }
+    body{
+      overflow:auto;
+    }
+  }

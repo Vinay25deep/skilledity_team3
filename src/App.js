@@ -4,6 +4,7 @@ import "./App.css";
 import LoginPortal from "./components/LoginPortal";
 import SchoolLoginPage from "./components/SchoolLoginPage";
 import Dashboard from "./components/Dashboard";
+import ForgotPasswordPage from "./components/ForgortPasswordPage";
 import { DataProvider } from './context/dataContext';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path='/' element={<LoginPortal />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="forgot-password" element={<ForgotPasswordPage />} />
           </Routes>
         </div>
       </BrowserRouter>
