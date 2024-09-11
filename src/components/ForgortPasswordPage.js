@@ -16,7 +16,7 @@ const ForgotPasswordPage = () => {
             <label htmlFor="EmailId">Email</label>
             <input type="Email" id="EmailId" placeholder="Enter your email address" />
           </div>
-          <p>A link to reset your password will be sent to your email address</p>
+          
           <a className="back-button" href="#!" onClick={(e) => {
     e.preventDefault(); 
     navigate('/school-login'); 

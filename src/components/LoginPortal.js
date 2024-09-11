@@ -17,7 +17,7 @@ function LoginPortal() {
       <div className="card">
         <div className="sub-card">
           <img
-            src="./SVGs/undraw_teacher_re_sico.svg"
+            src="./SVGs/undraw_teacher_re_sico 1.svg"
             alt="student"
             className="card-img"
             draggable="false"

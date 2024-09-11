@@ -107,9 +107,8 @@
 
   @media (max-width: 768px) {
     .upload-box {
-      width: 90%; 
+      width: 300px; 
       height: auto; 
-      padding: 20px;
     }
   
     .csv-header h1 {
@@ -122,16 +121,23 @@
   
     .btn-upload {
       width: 90px; 
-      padding: 8px 16px; 
+      padding: 8px 16px;
+       
     }
+    
   }
   
   @media (max-width: 480px) {
     .upload-box {
       width: 95%; 
-      padding: 15px;
+      height: auto;
     }
-  
+    
+    .btn-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .csv-header h1 {
       font-size: 28px;
     }
@@ -140,7 +146,13 @@
       font-size: 13px;
     }
   
-    .upload-box .upload-image {
+    .upload-box 
+    {
+      padding: 0;
+      height:80%;
+      width: 300px;
+
+    }.upload-image {
       width: 40px;
       height: 40px; 
     }
@@ -155,7 +167,9 @@
   
     .btn-upload {
       width: 80px;
-      padding: 8px 12px;
+      padding: 8px 8px;
+      margin: auto;
+      margin-top: 10px;
     }
   }
   
@@ -167,10 +181,11 @@
     .csv-header p {
       font-size: 12px;
     }
+    
   
     .upload-box {
       width: 100%;
-      padding: 10px;
+      padding: 0px;
     }
   
     #p2 {
@@ -181,7 +196,12 @@
       font-size: 10px;
     }
   
-    .upload-box .upload-image {
+    .upload-box 
+    {
+      padding: 0;
+      width:200px;
+    }
+    .upload-image {
       width: 30px;
       height: 30px; 
     }
@@ -190,5 +210,8 @@
       width: 70px;
       padding: 6px 10px;
       font-size: 12px; 
+      margin: auto;
+      margin-top: 10px;
+      
     }
   }
