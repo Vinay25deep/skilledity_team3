@@ -20,7 +20,7 @@
 
 .large {
   width: 654px;
-  font-family: "Montseratt", sans-serif;
+  font-family: "Montserrat";
   font-size: 42px;
   font-weight: 550;
   text-align: center;
@@ -31,7 +31,7 @@
 }
 
 .small {
-  font-family: "Montseratt", sans-serif;
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
   text-align: center;
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
-  font-family: "Montseratt", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 1);
   font-size: 20px;
   font-weight: 500;
@@ -94,7 +94,7 @@
 
 .form-label {
   margin-bottom: 8px;
-  font-family: "Montseratt", sans-serif;
+  font-family: "Montserrat";
   font-size: 16px;
   font-weight: bold;
 }
