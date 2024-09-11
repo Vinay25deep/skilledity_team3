@@ -7,6 +7,7 @@ import Dashboard from "./components/Dashboard";
 import ForgotPasswordPage from "./components/ForgortPasswordPage";
 import { DataProvider } from './context/dataContext';
 import UploadCSV from './components/UploadCSV';
+import ManualReg from './components/ManualReg';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
             <Route path="upload-csv" element={<UploadCSV />} />
+            <Route path="manual-register-student" element={<ManualReg />} />
 
           </Routes>
         </div>
