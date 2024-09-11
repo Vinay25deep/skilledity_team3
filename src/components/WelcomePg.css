@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-#reg-student {
+body,
+html {
   font-family: "Montserrat";
   margin: 0;
   padding: 0;
@@ -80,14 +81,14 @@
   max-width: 800px;
 }
 
-.form-group {
+.form-group1 {
   display: flex;
   flex-direction: column;
   width: 48%;
   margin-right: 130px;
 }
 
-.form-group:last-of-type {
+.form-group1:last-of-type {
   margin-left: 50px;
   margin-right: 0;
 }
@@ -99,7 +100,7 @@
   font-weight: bold;
 }
 
-.form-input {
+.section-input {
   width: 150px;
   padding: 10px 10px 10px 20px;
   border: 1px solid rgba(222, 229, 248, 1);
@@ -125,6 +126,10 @@
   background-color: white;
   font-weight: normal;
   color: #5d5c5c;
+}
+
+.dropdown-button:hover {
+  background-color: whitesmoke;
 }
 
 .dropdown-content {
@@ -237,69 +242,33 @@
 }
 
 @media (max-width: 768px) {
-  .large {
-    font-size: 32px;
-  }
-
-  .small {
-    font-size: 14px;
-  }
-
   .form-row {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  .form-group {
+  .form-group1 {
     width: 100%;
-    max-width: 300px;
-    margin: 0 auto 20px;
+    margin: 0 0 20px 0;
   }
 
-  .form-group:last-of-type {
+  .form-group1:last-of-type {
     margin-left: 0;
   }
 
-  .form-input,
+  .section-input,
   .dropdown-button {
     width: 100%;
-    max-width: 100%;
     padding: 10px;
   }
 
   .custom-dropdown {
     width: 100%;
-    max-width: 100%;
-  }
-
-  .dropdown-content {
-    width: 100%;
-  }
-
-  .form-container-reg {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-bottom: 80px;
-  }
-
-  .b1 {
-    padding: 0.375rem 1.25rem;
-    font-size: 0.875rem;
-    margin-top: 2.5rem;
-  }
-
-  .central-button-container {
-    position: fixed;
-    margin-bottom: 8.75rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .large {
     font-size: 2rem;
   }
@@ -314,17 +283,17 @@
     width: 100%;
   }
 
-  .form-group {
+  .form-group1 {
     width: 100%;
     max-width: 18.75rem;
     margin: 0 auto 1.25rem;
   }
 
-  .form-group:last-of-type {
+  .form-group1:last-of-type {
     margin-left: 0;
   }
 
-  .form-input,
+  .section-input,
   .dropdown-button {
     width: 100%;
     padding: 0.625rem;
@@ -383,8 +352,9 @@
     padding: 0.5rem;
   }
 
-  .form-input {
+  .section-input {
     width: 70%;
+    margin-bottom: 2rem;
   }
 
   .b1 {
@@ -395,14 +365,14 @@
 
   .central-button-container {
     position: fixed;
-    margin-bottom: 8.75rem;
+    margin-bottom: 10.75rem;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 }
 
-@media (max-width: 1026px) and (min-width: 767px) {
+@media (max-width: 1023px) and (min-width: 767px) {
   .large {
     margin-top: 17rem;
   }

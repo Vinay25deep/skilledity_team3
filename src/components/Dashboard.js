@@ -31,7 +31,7 @@ function Dashboard() {
           </div>
           <div className='button-group'>
           <button className="btn-csv" onClick={() => navigate('/upload-csv')}>Upload CSV</button>
-          <button className="btn-manual" onClick={() => navigate('/manual-register-student')}>Manual</button>
+          <button className="btn-manual" onClick={() => navigate('/welcome')}>Manual</button>
           </div>
         </div>
       </div>

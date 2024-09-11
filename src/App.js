@@ -8,7 +8,7 @@ import ForgotPasswordPage from "./components/ForgortPasswordPage";
 import { DataProvider } from './context/dataContext';
 import UploadCSV from './components/UploadCSV';
 import Register from './components/ManualReg';
-
+import Welcome from './components/WelcomePg';
 function App() {
   return (
     <DataProvider>
@@ -21,6 +21,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
             <Route path="upload-csv" element={<UploadCSV />} />
+            <Route path="welcome" element={<Welcome/>} />
             <Route path="manual-register-student" element={<Register/>}/>
 
           </Routes>

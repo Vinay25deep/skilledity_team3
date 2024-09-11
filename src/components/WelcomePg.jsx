@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
 import './WelcomePg.css';
 
 function Welcome() {
+  const navigate = useNavigate();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedClass, setSelectedClass] = useState('Select Class'); 
 
@@ -36,7 +38,7 @@ function Welcome() {
       <div className="small"> Select the class & section to proceed</div>
       <div className="form-container-reg">
         <div className="form-row">
-          <div className="form-group">
+          <div className="form-group1">
             <label htmlFor="class-dropdown" className="form-label">Class</label>
             <div className={`custom-dropdown ${isDropdownOpen ? 'active' : ''}`}>
               <button className="dropdown-button" onClick={toggleDropdown}>
@@ -64,12 +66,12 @@ function Welcome() {
               )}
             </div>
           </div>
-          <div className="form-group">
+          <div className="form-group1">
       <label htmlFor="section-input" className="form-label">Section</label>
       <input
         type="text"
         id="section-input"
-        className="form-input"
+        className="section-input"
         placeholder="Enter the section"
         value={section}
         maxLength={1}
@@ -80,7 +82,7 @@ function Welcome() {
         </div>
       </div>
       <div className="central-button-container">
-        <button className="b1"> <span class="text">Proceed</span></button>
+        <button className="b1" onClick={() => navigate('/manual-register-student')}> <span class="text">Proceed</span></button>
       </div>
     </div>
   );
