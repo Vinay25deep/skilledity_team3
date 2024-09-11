@@ -23,7 +23,6 @@ function UploadCSV()
                             <img src='./SVGs/Frame 75.svg'className='upload-image' alt=''></img>
                           <p id='p2'>Select a CSV file to upload</p>
                           <p id='p3'>Drag or drop your file here</p>
-
                         </>
                         )}
                         </label>

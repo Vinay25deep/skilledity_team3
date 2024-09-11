@@ -13,8 +13,8 @@ const ForgotPasswordPage = () => {
         <div>
         <form className='container'> 
           <div className="FPP-form-group">
-            <label htmlFor="EmailId">Email</label>
-            <input type="Email" id="EmailId" placeholder="Enter your email address" />
+            <label htmlFor="EmailIdfgp">Email</label>
+            <input type="Email" id="EmailIdfgp" placeholder="Enter your email address" />
           </div>
           
           <a className="back-button" href="#!" onClick={(e) => {

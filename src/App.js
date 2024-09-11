@@ -21,7 +21,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
             <Route path="upload-csv" element={<UploadCSV />} />
-           <Route path="manual-register-student" element={<Register/>}/>
+            <Route path="manual-register-student" element={<Register/>}/>
 
           </Routes>
         </div>

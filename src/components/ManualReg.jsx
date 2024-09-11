@@ -22,15 +22,15 @@ function Register() {
   };
 
   return (
-    <>
+    <div id="manual-reg">
       <div className="large">
         Register <span style={{ color: 'rgba(85, 103, 156, 1)' }}>student!</span>
       </div>
       <div className="small">
         Register your student by filling out the registration form.
       </div>
-      <form onSubmit={handleSubmit}>
-        <div className="form-container">
+      <form id="reg-form" onSubmit={handleSubmit}>
+        <div className="reg-form-container">
           <div className="form-column left-column">
             <div className="input-field">
               <label>Name</label>
@@ -154,7 +154,7 @@ function Register() {
 
         <button type="submit" className="proceed-button">Proceed</button>
       </form>
-    </>
+    </div>
   );
 }
 

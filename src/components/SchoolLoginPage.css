@@ -6,6 +6,8 @@
     padding: 0 50px;
     padding-left: 200px;
   }
+
+
   
   .login-form {
     display: flex;
@@ -79,7 +81,7 @@
     margin-bottom: 5px;
   }
   
-  input[type="text"],
+  .form-group > [type="text"],
   input[type="password"] {
     padding: 10px;
     border: 1px solid #DEE5F8;
@@ -113,7 +115,7 @@ input[type="password"]:focus {
     top: 10px;
   }
   
-  button {
+  .container > button {
     font-family: 'montserrat';
     width: 100%;
     padding: 12px;
@@ -231,6 +233,7 @@ input[type="password"]:focus {
       max-height: 100vh;
       padding:29px;
       padding-bottom: 0;
+      padding-top: 0;
       overflow:hidden;
       display: flex;
     }

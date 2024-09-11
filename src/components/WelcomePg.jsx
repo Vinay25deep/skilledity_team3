@@ -31,10 +31,10 @@ function Welcome() {
   };
 
   return (
-    <>
+    <div id="reg-student">
       <div className="large"> Welcome <span style={{ color: 'rgba(85, 103, 156, 1)' }}>aboard!</span></div>
       <div className="small"> Select the class & section to proceed</div>
-      <div className="form-container">
+      <div className="form-container-reg">
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="class-dropdown" className="form-label">Class</label>
@@ -82,7 +82,7 @@ function Welcome() {
       <div className="central-button-container">
         <button className="b1"> <span class="text">Proceed</span></button>
       </div>
-    </>
+    </div>
   );
 }
 

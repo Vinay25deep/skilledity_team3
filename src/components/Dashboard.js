@@ -14,6 +14,7 @@ function Dashboard() {
         <p className="school-name">{schoolName}</p>
       </header>
 
+
       <div className="dashboard-content">
         <div className="card">
         <div className='h2-p'>
