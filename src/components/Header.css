@@ -9,7 +9,7 @@
     margin: 0 auto;
     width: 100%;
     height: 40px;
-    padding: 1rem;
+    padding: 0.6rem;
     border: 0px 0px 1px 0px;
     background:#F6F7FA;
     /* backdrop-filter: blur(14px); */
@@ -23,9 +23,10 @@
   .Navbar {
     position: absolute;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     }
+
     
     .logo {
       display: flex;
@@ -34,14 +35,23 @@
       font-weight: 600;
       font-family: Mooli;
       color: #000;
+      margin-left:3rem;
+    }
+    #logo-pic{
+      height: 40px;
+      width: 8rem;
     }
     
     .buttons button {
-      padding: 0.6rem 3rem;
+      padding: 0.6rem 2.1rem;
       border-radius: 4px;
       font-size: 16px;
       font-family: Montserrat;
       font-weight: 400;
+    }
+
+    .buttons{
+      margin-right: 3rem;
     }
 
     .login {

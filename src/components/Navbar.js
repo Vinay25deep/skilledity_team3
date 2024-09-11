@@ -5,10 +5,10 @@ function Header() {
   return (
     <header className="header">
       <div className="Navbar">
-        <div className="logo">skilledity</div>
+        <img id="logo-pic" alt="Skilledity" src="./SVGs/skilleditylogo.svg" className="logo"></img>
         <div className="buttons">
-          <a href="/LoginPortal">
-            <button className="login">Login </button>
+          <a id="login-button" href="/LoginPortal">
+            <button className="login">Logout </button>
           </a>
         </div>
       </div>

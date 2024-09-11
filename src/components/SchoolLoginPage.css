@@ -145,6 +145,82 @@ input[type="password"]:focus {
 
   }
 
+  @media (max-width: 1160px) and (min-width:820px){
+    body{
+      overflow: hidden;
+    }
+    .login-form {
+      display:flex;
+      align-items: left;
+      justify-content: left;
+      padding: 40px;
+      width:80%;
+      height:60vh;
+      min-width: none;
+    }
+    .login-container{
+      max-height: 100vh;
+      padding:29px;
+      padding-bottom: 0;
+      display: flex;
+    }
+  
+    h1 {
+      font-size: 59px;
+      margin-bottom: 2rem;
+    }
+  
+    h3 {
+      font-size: 37px;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+      height:3rem;
+      font-size: 20px;
+      padding: 0.6rem;
+    }
+
+    .login-image{
+      display: none;
+      width:0;
+      height:0;
+      padding:0;
+    }
+
+    .forgot-password{
+      a{
+        font-size: 1.4rem;
+      }
+      margin-bottom: 3.6rem;
+    }
+
+    .form-group{
+      label{
+        font-size: 28px;
+      }
+    }
+
+    .container{
+      button{
+        height:4rem;
+        font-size: 24px;
+      }
+    }
+
+    .login-image img {
+      display: none; 
+      width:0;
+      height:0;/* Hide the image on very small screens if necessary */
+    }
+  }
+  
+
   @media (max-width: 480px) {
     .login-form {
       padding: 25px;

@@ -22,10 +22,6 @@ const SchoolLoginPage = () => {
             <input type="password" id="password" placeholder="Enter your Password" />
           </div>
           <div className="form-group-inline">
-            <div className="remember-me">
-              <input type="checkbox" id="remember-me" />
-              <label htmlFor="remember-me">Remember Me</label>
-            </div>
             <div className="forgot-password" onClick={() => navigate('forgot-password')}>
               <a href="/forgot-password">Forgot Password?</a>
             </div>
