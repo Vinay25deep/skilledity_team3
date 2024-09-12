@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 
 #reg-student {
@@ -85,6 +84,7 @@
   margin-left: 40px;
   margin-right: 0;
 }
+
 
 .form-label {
   margin-bottom: 8px;
@@ -282,7 +282,7 @@
 
   .central-button-container {
     position: fixed;
-    margin-bottom: 8.75rem;
+    margin-bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -338,7 +338,7 @@
   .central-button-container {
     display: flex;
     justify-content: center;
-    margin-top: 1.25rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -387,7 +387,7 @@
 
   .central-button-container {
     position: fixed;
-    margin-bottom: 8.75rem;
+    margin-bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -405,7 +405,7 @@
   }
   .central-button-container {
     position: relative;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
