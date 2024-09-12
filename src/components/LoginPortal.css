@@ -1,13 +1,14 @@
-
+body{
+  overflow: hidden;
+}
 
 .hero-section {
-    margin: 8rem 0rem;
+    margin: 7em 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction:column;
     gap:2rem;  
-    
   }
   
   .hero-content {
@@ -46,13 +47,12 @@
   }
   
   .card .card-img{
-    max-width: 250px;
-    height:200px;
-    margin-bottom: 10px;
+    max-width: 200px;
+    height:130px;
   }
   .card .card-title{
     margin:0;
-    font-size:2rem;
+    font-size:1.5rem;
     font-weight: 600  ;
     color:hsla(0, 0%, 20%);
   }
@@ -71,17 +71,18 @@
     flex-direction: column;
     gap: 2rem ;
     border-radius: 12px;
-    max-width: 500px;
+    max-width: 370px;
+    height:23rem;
     background-color: rgba(25, 90, 175, 0.02);
     border: 2px solid transparent;
     box-sizing: border-box;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: border-color 0.7s ease-in-out, box-shadow 0.2s ease-in-out;
     padding: 2rem 4rem;
   }
   
   .sub-card:hover {
-    border-color: #98A8D7; /* Only change the color, not the width */
-    box-shadow: rgba(0, 0, 0, 0.08);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   }
   
   
@@ -89,7 +90,9 @@
 .sub-card-text{
   display: flex;
   align-items: center;
-  flex-direction: column;}
+  flex-direction: column;
+  margin-bottom: 1.4rem;
+}
 
 .btnLogin{
   padding: 0.60rem 2rem;
@@ -103,23 +106,58 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-
+ 
 .btnLogin:hover{
   background-color: rgba(4, 8, 27, 0.85);
 }
 
+@media only screen and (max-width:1160px) {
+  body{
+    overflow:auto;
+  }
+  
+  .hero-content h1{
+    max-width: 500px;
+  }
+  .sub-card{
+    width:30rem;
+    margin:2rem;
+  }
+}
 
   @media only screen and (max-width:768px) {
     .hero-content h1{
-      max-width: 500px
+      max-width: 500px;
     }
-    .sub-card{
-      /* width: 0; */
+    body{
+      overflow:auto;
     }
   }
 
   @media only screen and (max-width:425px) {
     .hero-content h1{
       font-size: 2rem;
+    }
+    body{
+      overflow:auto;
+    }
+  }
+
+  @media only screen and (max-width:360px) {
+    .card .card-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: hsla(0, 0%, 20%);
+      margin-bottom:10px;
+  }
+  .card-text{
+    text-align: center;
+  }
+    .sub-card{
+      width:80%;
+    }
+    body{
+      overflow:auto;
     }
   }

@@ -1,0 +1,427 @@
+#manual-reg {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+}
+
+.large {
+  width: 654px;
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 550;
+  text-align: center;
+  margin-top: 95px;
+  margin-bottom: 2px;
+  color: #000000;
+  line-height: 1.1;
+  margin-left: 0px;
+}
+
+.small {
+  font-family: "Montserrat";
+  font-weight: 450;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 3px;
+  color: #666;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+#reg-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.reg-form-container {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-column {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 7rem;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-column,
+.right-column {
+  width: 45%;
+  box-sizing: border-box;
+}
+.input-field {
+  margin-bottom: 1.6rem;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 540;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.input-field input[type="text"],
+.input-field input[type="tel"],
+.input-field input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dee5f8;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.dob-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 77%;
+}
+
+.dob-inputs input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #dee5f8;
+  border-radius: 5px;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.gender-button {
+  padding: 10px;
+  border: 1px solid #dee5f8;
+  height: 120px;
+  width: 105px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.gender-button:focus {
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
+  outline: 0px;
+}
+.proceed-button {
+  font-family: "Montserrat";
+  background-color: #f5f4f4;
+  border-radius: 50px;
+  padding: 10px 40px;
+  color: black;
+}
+
+.proceed-button:hover {
+  border-radius: 50px;
+  padding: 10px 40px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .b1 {
+    margin-top: 0;
+  }
+  .reg-form-container {
+    flex-direction: column;
+  }
+
+  .form-column {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.gender-icon {
+  background-color: white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 2.9rem;
+  border: 1px solid #dee5f8;
+  border-radius: 100%;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.gender-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 767px) {
+  .reg-form-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .form-column {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .input-field {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+
+  .input-field input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .left-column {
+    margin-right: 0;
+  }
+
+  .gender-options {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .gender-button {
+    width: 120px;
+    height: 130px;
+    flex: none;
+  }
+
+  .gender-button > span {
+    font-family: "Montserrat";
+  }
+
+  .proceed-button {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .large {
+    margin-top: 100px;
+    font-size: 32px;
+    margin-left: 15px;
+  }
+
+  .small {
+    font-size: 14px;
+    margin-left: 3em;
+  }
+  #b1-btn {
+    margin-top: 1.7rem;
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .b1 {
+    margin-top: 0;
+  }
+  .large {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 110px;
+    margin-left: 0;
+  }
+
+  .small {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .reg-form-container {
+    padding: 10px;
+  }
+
+  .form-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    width: 90%;
+  }
+  .input-field input {
+    font-size: 14px;
+  }
+
+  .gender-button {
+    width: 100px;
+    height: 110px;
+  }
+
+  .proceed-button {
+    margin-bottom: 45px;
+    width: 40%;
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1023px) {
+  .b1 {
+    margin-top: 0;
+  }
+
+  .reg-form-container {
+    padding: 20px;
+  }
+
+  .form-column {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .input-field {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input-field input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .gender-options {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .gender-button {
+    width: 120px;
+    height: 130px;
+  }
+
+  .proceed-button {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .large {
+    margin-top: 100px;
+    font-size: 38px;
+    margin-left: 15px;
+  }
+
+  .small {
+    font-size: 18px;
+  }
+}
+
+.gender-button {
+  padding: 10px;
+  border: 1px solid #dee5f8;
+  height: 120px;
+  width: 105px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: #707070;
+  font-size: 16px;
+  text-align: center;
+}
+
+.gender-button.selected:hover {
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
+  outline: 0px;
+}
+
+.gender-button.selected {
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
+  outline: 0px;
+}
+
+.gender-button:focus {
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
+  outline: 0px;
+}
+
+.gender-button:hover {
+  border-color: #aaa;
+  background-color: white;
+  border: 1px solid #dee5f8;
+}
+
+@media (min-width: 819px) and (max-width: 913px) {
+  .b1 {
+    margin-top: 0;
+  }
+
+  .left-column {
+    margin-right: 10px;
+    width: 45%;
+  }
+  .right-column {
+    width: 46%;
+  }
+}
+
+@media (min-width: 344px) and (max-width: 344px) {
+  .b1 {
+    margin-top: 0;
+  }
+
+  .small {
+    margin-left: 0;
+  }
+  .reg-form {
+    align-items: center;
+  }
+
+  #manual-reg {
+    margin-right: 0px;
+  }
+}

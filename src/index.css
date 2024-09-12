@@ -5,3 +5,11 @@ body {
   font-family:'Montserrat';
   box-sizing:none;
 }
+body {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 95%, rgba(194, 208, 248, 0.4) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  min-height: 100vh;
+}
+
