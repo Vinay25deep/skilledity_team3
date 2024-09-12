@@ -1,11 +1,10 @@
 import React from "react";
 import "./Header.css";
-
 function Header() {
   return (
     <header className="header">
       <div className="Navbar">
-        <img id="logo-pic" alt="Skilledity" src="./SVGs/skilleditylogo.svg" className="logo"></img>
+        <img id="logo-pic" alt="Skilledity" src="./public/Logo.png" className="logo"></img>
         <div className="buttons">
           <a id="login-button" href="/LoginPortal">
             <button className="login">Logout </button>

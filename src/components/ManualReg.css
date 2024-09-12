@@ -1,4 +1,3 @@
-
 #manual-reg {
   font-family: "Montserrat";
   margin: 0;
@@ -42,7 +41,6 @@
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 
 #reg-form {
   display: flex;
@@ -98,7 +96,7 @@
 .input-field input[type="email"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
   border-radius: 5px;
   font-size: 1em;
   box-sizing: border-box;
@@ -114,7 +112,7 @@
 .dob-inputs input {
   width: 30%;
   padding: 10px;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
   border-radius: 5px;
 }
 
@@ -126,7 +124,7 @@
 
 .gender-button {
   padding: 10px;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
   height: 120px;
   width: 105px;
   border-radius: 5px;
@@ -136,8 +134,8 @@
 }
 
 .gender-button:focus {
-  background-color:rgba(222, 229, 248, 1);
-  border:0px;
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
   outline: 0px;
 }
 .proceed-button {
@@ -154,7 +152,7 @@
   color: white;
 }
 @media (max-width: 767px) {
-  .b1{
+  .b1 {
     margin-top: 0;
   }
   .reg-form-container {
@@ -169,13 +167,13 @@
 
 .gender-icon {
   background-color: white;
-  margin:auto;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 3rem;
   height: 2.9rem;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
   border-radius: 100%;
   padding: 2px;
   margin-bottom: 10px;
@@ -240,23 +238,23 @@
   }
 
   .large {
-    margin-top:100px;
+    margin-top: 100px;
     font-size: 32px;
     margin-left: 15px;
   }
 
   .small {
     font-size: 14px;
-    margin-left:3em;
+    margin-left: 3em;
   }
-  #b1-btn{
-    margin-top:1.7rem;
-    margin-bottom:5rem;
+  #b1-btn {
+    margin-top: 1.7rem;
+    margin-bottom: 5rem;
   }
 }
 
 @media (max-width: 550px) {
-  .b1{
+  .b1 {
     margin-top: 0;
   }
   .large {
@@ -301,7 +299,7 @@
 }
 
 @media (min-width: 770px) and (max-width: 1023px) {
-  .b1{
+  .b1 {
     margin-top: 0;
   }
 
@@ -361,7 +359,7 @@
 
 .gender-button {
   padding: 10px;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
   height: 120px;
   width: 105px;
   margin-right: 10px;
@@ -374,31 +372,31 @@
 }
 
 .gender-button.selected:hover {
-  background-color:rgba(222, 229, 248, 1);
-  border:0px;
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
   outline: 0px;
 }
 
 .gender-button.selected {
-  background-color:rgba(222, 229, 248, 1);
-  border:0px;
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
   outline: 0px;
 }
 
-.gender-button:focus{
-  background-color:rgba(222, 229, 248, 1);
-  border:0px;
+.gender-button:focus {
+  background-color: rgba(222, 229, 248, 1);
+  border: 0px;
   outline: 0px;
 }
 
 .gender-button:hover {
   border-color: #aaa;
   background-color: white;
-  border: 1px solid #DEE5F8;
+  border: 1px solid #dee5f8;
 }
 
 @media (min-width: 819px) and (max-width: 913px) {
-  .b1{
+  .b1 {
     margin-top: 0;
   }
 
@@ -412,18 +410,18 @@
 }
 
 @media (min-width: 344px) and (max-width: 344px) {
-  .b1{
+  .b1 {
     margin-top: 0;
   }
 
-  .small{
-    margin-left:0
+  .small {
+    margin-left: 0;
   }
-  .reg-form{
+  .reg-form {
     align-items: center;
   }
-  
-  #manual-reg{
+
+  #manual-reg {
     margin-right: 0px;
   }
 }
