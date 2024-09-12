@@ -1,3 +1,4 @@
+
 #manual-reg {
   font-family: "Montserrat";
   margin: 0;
@@ -42,20 +43,17 @@
   margin-bottom: 10px;
 }
 
-.reg-form-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
 
 #reg-form {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
+  padding: 20px;
 }
 
 .reg-form-container {
+  padding: 20px;
   display: flex;
   width: 100%;
   max-width: 1200px;
@@ -70,7 +68,7 @@
 .left-column {
   display: flex;
   flex-direction: column;
-  margin-right: 70px;
+  margin-right: 7rem;
 }
 
 .right-column {
@@ -84,7 +82,7 @@
   box-sizing: border-box;
 }
 .input-field {
-  margin-bottom: 10px;
+  margin-bottom: 1.6rem;
 }
 
 .input-field label {
@@ -100,7 +98,7 @@
 .input-field input[type="email"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #DEE5F8;
   border-radius: 5px;
   font-size: 1em;
   box-sizing: border-box;
@@ -116,7 +114,7 @@
 .dob-inputs input {
   width: 30%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #DEE5F8;
   border-radius: 5px;
 }
 
@@ -128,18 +126,19 @@
 
 .gender-button {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #DEE5F8;
   height: 120px;
   width: 105px;
-  margin-right: 10px;
   border-radius: 5px;
   cursor: pointer;
   background-color: white;
   color: black;
 }
 
-.gender-button:hover {
-  background-color: lightblue;
+.gender-button:focus {
+  background-color:rgba(222, 229, 248, 1);
+  border:0px;
+  outline: 0px;
 }
 .proceed-button {
   font-family: "Montserrat";
@@ -155,6 +154,9 @@
   color: white;
 }
 @media (max-width: 767px) {
+  .b1{
+    margin-top: 0;
+  }
   .reg-form-container {
     flex-direction: column;
   }
@@ -166,13 +168,14 @@
 }
 
 .gender-icon {
-  margin-left: 15px;
+  background-color: white;
+  margin:auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
-  height: 50%;
-  border: 1px solid lightgrey;
+  width: 3rem;
+  height: 2.9rem;
+  border: 1px solid #DEE5F8;
   border-radius: 100%;
   padding: 2px;
   margin-bottom: 10px;
@@ -237,16 +240,25 @@
   }
 
   .large {
+    margin-top:100px;
     font-size: 32px;
     margin-left: 15px;
   }
 
   .small {
     font-size: 14px;
+    margin-left:3em;
+  }
+  #b1-btn{
+    margin-top:1.7rem;
+    margin-bottom:5rem;
   }
 }
 
 @media (max-width: 550px) {
+  .b1{
+    margin-top: 0;
+  }
   .large {
     font-size: 30px;
     width: 100%;
@@ -289,6 +301,10 @@
 }
 
 @media (min-width: 770px) and (max-width: 1023px) {
+  .b1{
+    margin-top: 0;
+  }
+
   .reg-form-container {
     padding: 20px;
   }
@@ -333,7 +349,7 @@
   }
 
   .large {
-    margin-top: 240px;
+    margin-top: 100px;
     font-size: 38px;
     margin-left: 15px;
   }
@@ -345,28 +361,47 @@
 
 .gender-button {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #DEE5F8;
   height: 120px;
   width: 105px;
   margin-right: 10px;
   border-radius: 5px;
   cursor: pointer;
   background-color: white;
-  color: black;
+  color: #707070;
   font-size: 16px;
   text-align: center;
 }
 
+.gender-button.selected:hover {
+  background-color:rgba(222, 229, 248, 1);
+  border:0px;
+  outline: 0px;
+}
+
 .gender-button.selected {
-  border: 1.5px solid blue;
+  background-color:rgba(222, 229, 248, 1);
+  border:0px;
+  outline: 0px;
+}
+
+.gender-button:focus{
+  background-color:rgba(222, 229, 248, 1);
+  border:0px;
+  outline: 0px;
 }
 
 .gender-button:hover {
   border-color: #aaa;
-  color: white;
+  background-color: white;
+  border: 1px solid #DEE5F8;
 }
 
 @media (min-width: 819px) and (max-width: 913px) {
+  .b1{
+    margin-top: 0;
+  }
+
   .left-column {
     margin-right: 10px;
     width: 45%;
@@ -377,7 +412,18 @@
 }
 
 @media (min-width: 344px) and (max-width: 344px) {
-  .reg-form-container {
-    margin-left: 10px;
+  .b1{
+    margin-top: 0;
+  }
+
+  .small{
+    margin-left:0
+  }
+  .reg-form{
+    align-items: center;
+  }
+  
+  #manual-reg{
+    margin-right: 0px;
   }
 }

@@ -34,7 +34,7 @@ function Welcome() {
 
   return (
     <div id="reg-student">
-      <div className="large"> Welcome <span style={{ color: 'rgba(85, 103, 156, 1)' }}>aboard!</span></div>
+      <div className="large-wel"> Welcome <span style={{ color: 'rgba(85, 103, 156, 1)' }}>aboard!</span></div>
       <div className="small"> Select the class & section to proceed</div>
       <div className="form-container-reg">
         <div className="form-row">
