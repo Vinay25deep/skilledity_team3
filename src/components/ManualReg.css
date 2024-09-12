@@ -365,3 +365,19 @@
   border-color: #aaa;
   color: white;
 }
+
+@media (min-width: 819px) and (max-width: 913px) {
+  .left-column {
+    margin-right: 10px;
+    width: 45%;
+  }
+  .right-column {
+    width: 46%;
+  }
+}
+
+@media (min-width: 344px) and (max-width: 344px) {
+  .reg-form-container {
+    margin-left: 10px;
+  }
+}

@@ -312,6 +312,9 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     padding-bottom: 5rem;
+    font-size: 18px;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .central-button-container {
@@ -372,14 +375,50 @@ html {
   }
 }
 
+@media (max-width: 539px) and (min-width: 376px) {
+  .central-button-container {
+    margin-bottom: 20rem;
+  }
+}
 @media (max-width: 1023px) and (min-width: 767px) {
   .large {
     margin-top: 17rem;
+    font-size: 48px;
+  }
+
+  .small {
+    font-size: 22px;
   }
 
   .central-button-container {
     position: relative;
     margin-top: 2rem;
     margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) and (max-height: 1366px) {
+  .central-button-container {
+    margin-bottom: 40rem;
+  }
+  .large {
+    margin-top: 17rem;
+    font-size: 50px;
+  }
+  .small {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
+  .central-button-container {
+    margin-bottom: 10rem;
+  }
+  .large {
+    margin-top: 10rem;
+    font-size: 50px;
+  }
+  .small {
+    font-size: 26px;
   }
 }
