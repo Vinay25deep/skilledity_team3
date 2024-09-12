@@ -252,3 +252,52 @@ input[type="password"]:focus {
     }
   }
   
+  @media (min-width: 768px) and (orientation:portrait){
+    .login-form {
+      /* padding: 25px; */
+      width:80%;
+      min-width: none;
+    }
+    .login-container{
+      max-height: 100vh;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      overflow:hidden;
+      display: flex;
+      padding-left: 125px;
+      padding-right: 125px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    input[type="text"],
+    input[type="password"],
+    button[type="submit"] {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .login-image{
+      width:0;
+      height:0;
+      padding:0;
+    }
+    
+
+    .login-image img {
+      display: none; 
+      width:0;
+      height:0;
+    }
+  }
