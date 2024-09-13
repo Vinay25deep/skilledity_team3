@@ -7,9 +7,13 @@ function Header() {
   const navigate = useNavigate(); 
 
   let buttonText = "Logout";
-  if (location.pathname === "/") {
+  if (location.pathname === "/" ) {
     buttonText = "Login";
-  } else {
+  } else if(location.pathname === "/school-login"){
+    buttonText = "Login";
+  }else if(location.pathname === "/forgot-password"){
+    buttonText = "Login";
+  }else{
     buttonText = "Logout";
   }
 
