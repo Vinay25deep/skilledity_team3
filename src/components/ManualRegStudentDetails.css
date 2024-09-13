@@ -7,16 +7,19 @@ a{
     text-decoration: none;
 }
 
-h1,p{
+h1,p,a{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
-.container{
+.container-students{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 8rem;
+
 }
 
 .studentDetails{

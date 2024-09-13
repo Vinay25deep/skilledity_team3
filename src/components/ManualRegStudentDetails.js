@@ -3,7 +3,7 @@ import "./ManualRegStudentDetails.css";
 
 const ManualStudentDetails = () => {
   return (
-    <div className="container">
+    <div className="container-students">
       <div className="containerContent">
         <h1 className="studentDetails">
           Student <span className="detailsSpan">Details!</span>
