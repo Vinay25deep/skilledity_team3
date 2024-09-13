@@ -1,17 +1,37 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
+
 function Header() {
+  const location = useLocation(); 
+  const navigate = useNavigate(); 
+
+  let buttonText = "Logout";
+  if (location.pathname === "/") {
+    buttonText = "Login";
+  } else {
+    buttonText = "Logout";
+  }
+
+  const handleLogout = () => {
+    if (buttonText === "Logout") {
+      navigate("/"); 
+    }
+    if (buttonText === "Login") {
+      navigate("/"); 
+    }
+  };
+
   return (
     <header className="header">
       <div className="Navbar">
-        <img id="logo-pic" alt="Skilledity" src="SVGs/newLogo.svg" className="logo"></img>
+        <img id="logo-pic" alt="Skilledity" src="SVGs/newLogo.svg" className="logo" />
         <div className="buttons">
-          <a id="login-button" href="/LoginPortal">
-            <button className="login">Logout </button>
-          </a>
+          <button className="login" onClick={handleLogout}>
+            {buttonText}
+          </button>
         </div>
       </div>
-      <div />
     </header>
   );
 }
