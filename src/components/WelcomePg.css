@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-
 #reg-student {
   font-family: "Montserrat";
   margin: 0;
@@ -84,7 +83,6 @@
   margin-left: 40px;
   margin-right: 0;
 }
-
 
 .form-label {
   margin-bottom: 8px;
@@ -342,7 +340,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 539px) {
   .large-wel {
     font-size: 1.875rem;
     width: 100%;
@@ -352,7 +350,7 @@
 
   .small {
     font-size: 1.125rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 0rem;
     margin-left: 0rem;
   }
 
@@ -367,7 +365,7 @@
 
   .form-group1 {
     width: 100%;
-    margin-bottom: 3.125rem;
+    margin-bottom: 1.5rem;
   }
 
   .dropdown-button {
@@ -377,20 +375,89 @@
 
   .form-input {
     width: 70%;
+    margin-bottom: 0px;
   }
 
   .b1 {
     padding: 0.375rem 1.25rem;
     font-size: 0.875rem;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
   }
 
   .central-button-container {
-    position: fixed;
-    margin-bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 20rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 540px) and (min-width: 540px) {
+  .large-wel {
+    font-size: 1.875rem;
+    width: 100%;
+    margin-top: 8.875rem;
+    margin-left: 0rem;
+  }
+
+  .small {
+    font-size: 1.125rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+  }
+
+  .form-container-reg {
+    padding: 0.625rem;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-group1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .form-input {
+    width: 70%;
+    margin-bottom: 0px;
+  }
+
+  .b1 {
+    padding: 0.375rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 0rem;
+  }
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1280px) {
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.75rem;
   }
 }
 
