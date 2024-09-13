@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./LoginPortal.css";
-import { Link } from "react-router-dom";
+
 function LoginPortal() {
+  const navigate = useNavigate()
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -15,18 +17,18 @@ function LoginPortal() {
       <div className="card">
         <div className="sub-card">
           <img
-            src="./SVGs/undraw_exams_re_4ios.svg"
+            src="./SVGs/undraw_teacher_re_sico 1.svg"
             alt="student"
             className="card-img"
             draggable="false"
           ></img>
           <div className="sub-card-text">
-            <h2 className="card-title">Student Login</h2>
+            <h2 className="card-title">Student Login</h2> 
             <p className="card-text">Accessing your student portal.</p>
           </div>
-          <Link to="/SchoolLoginPage">
+          <a href="/student-login">
             <button className="btnLogin">Login</button>
-          </Link>
+          </a>
         </div>
         <div className="sub-card">
           <img
@@ -39,13 +41,13 @@ function LoginPortal() {
             <h2 className="card-title">School Login</h2>
             <p className="card-text">Accessing your school portal.</p>
           </div>
-          <Link to="/SchoolLoginPage">
-            <button className="btnLogin">Login</button>
-          </Link>
+          <a href="/school-login">
+            <button  onClick={() => navigate('school-login')} className="btnLogin">Login</button>
+          </a>
         </div>
         <div className="sub-card">
           <img
-            src="./SVGs/undraw_add_information_j2wg.svg"
+            src="./SVGs/undraw_teaching_re_g7e3.svg"
             alt=""
             className="card-img"
             draggable="false"
@@ -54,9 +56,9 @@ function LoginPortal() {
             <h2 className="card-title">Admin Login</h2>
             <p className="card-text">Accessing your admin portal.</p>
           </div>
-          <Link to="/SchoolLoginPage">
+          <a href="/admin-login">
             <button className="btnLogin">Login</button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

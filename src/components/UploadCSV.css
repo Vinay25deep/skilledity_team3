@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+.upload-csv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  
+}
+.csv-header{
+    text-align: center;
+}
+.csv-header h1 {
+  font-size: 41px;
+  color: black;
+  margin-bottom: 10px;
+}
+.csv-header h1 span{
+    color:#55679c;
+}
+
+.csv-header p {
+    font-size: 15px;
+    color: #707070;
+    margin-bottom: 40px;
+  }
+  .upload-content{
+    background-color: #70707005;
+    padding: 35px;
+    
+  }
+#p1{
+    font-size: 15px;
+    font-weight: bold;
+    color:black;
+    
+    
+}
+
+.upload-content .btn-container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 6px;
+  }
+.upload-box {
+  width: 700px;
+  height: 190px;
+  border: 2px dashed #b0b3b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+#p2{
+    color: black;
+}
+#p3{
+    font-size: 13px;
+    
+}
+.upload-box .upload-image{
+    width:50px;
+    height: 50px;
+}
+.upload-box:hover {
+  border-color: #55679c;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #707070;
+}
+
+.file-upload-label p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #707070;
+}
+
+.btn-upload {
+    font-family: "Montserrat";
+    margin:auto;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px 20px;
+    width:100px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: right;
+    justify-content: right;
+    
+  }
+  
+  .btn-upload:hover {
+    background-color: rgba(4, 8, 27, 0.85);
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .upload-box {
+      width: 300px; 
+      height: auto; 
+    }
+  
+    .csv-header h1 {
+      font-size: 36px;
+    }
+  
+    .csv-header p {
+      font-size: 14px;
+    }
+  
+    .btn-upload {
+      width: 90px; 
+      padding: 8px 16px;
+       
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    .upload-box {
+      width: 95%; 
+      height: auto;
+    }
+    
+    .btn-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .csv-header h1 {
+      font-size: 28px;
+    }
+  
+    .csv-header p {
+      font-size: 13px;
+    }
+  
+    .upload-box 
+    {
+      padding: 0;
+      height:80%;
+      width: 300px;
+
+    }.upload-image {
+      width: 40px;
+      height: 40px; 
+    }
+  
+    #p2 {
+      font-size: 14px;
+    }
+  
+    #p3 {
+      font-size: 12px;
+    }
+  
+    .btn-upload {
+      width: 80px;
+      padding: 8px 8px;
+      margin: auto;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .csv-header h1 {
+      font-size: 24px;
+    }
+  
+    .csv-header p {
+      font-size: 12px;
+    }
+    
+  
+    .upload-box {
+      width: 100%;
+      padding: 0px;
+    }
+  
+    #p2 {
+      font-size: 12px;
+    }
+  
+    #p3 {
+      font-size: 10px;
+    }
+  
+    .upload-box 
+    {
+      padding: 0;
+      width:200px;
+    }
+    .upload-image {
+      width: 30px;
+      height: 30px; 
+    }
+  
+    .btn-upload {
+      width: 70px;
+      padding: 6px 10px;
+      font-size: 12px; 
+      margin: auto;
+      margin-top: 10px;
+      
+    }
+  }

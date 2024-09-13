@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+
+#reg-student {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+}
+
+.large-wel {
+  width: 654px;
+  font-family: "Montserrat";
+  font-size: 42px;
+  font-weight: 550;
+  text-align: center;
+  margin-top: 95px;
+  margin-bottom: 2px;
+  color: #000000;
+  line-height: 1.1;
+}
+
+.small {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0px;
+  color: #666;
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+
+.central-button-container {
+  position: fixed;
+  margin-top: 225px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 1);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-container-reg {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 8px;
+  flex-grow: 1;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-group1 {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  margin-right: 80px;
+}
+
+.form-group1:last-of-type {
+  margin-left: 40px;
+  margin-right: 0;
+}
+
+
+.form-label {
+  margin-bottom: 8px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-input {
+  width: 150px;
+  padding: 10px 10px 10px 20px;
+  border: 1.8px solid rgba(222, 229, 248, 1);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Updated custom dropdown and dropdown button styles */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 20rem; /* Adjusted width for larger dropdown */
+  height: 40px; /* Increased height for a bigger dropdown */
+}
+
+.dropdown-button {
+  width: 100%;
+  padding: 10px 10px 10px 20px; /* Increased padding for larger size */
+  border: 1.8px solid rgba(222, 229, 248, 1);
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px; /* Increased font size */
+  background-color: white;
+  position: relative;
+  font-family: "Montserrat";
+  color: grey;
+}
+
+.dropdown-button::after {
+  content: "\2304"; /* Initial down arrow */
+  position: absolute;
+  right: 25px;
+  top: 50%; /* Center the arrow vertically */
+  transform: translateY(-70%) rotate(0deg); /* Default state, no rotation */
+  font-size: 24px; /* Larger arrow */
+  transition: transform 0s; /* Smooth transition for rotation */
+  transform-origin: center; /* Rotate around the center of the element */
+}
+
+.custom-dropdown.active .dropdown-button::after {
+  transform: translateY(-10%) rotate(180deg); /* Rotate 180 degrees to point up without moving */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  z-index: 1;
+  padding: 5px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 8px 8px;
+  cursor: pointer;
+  color: #333;
+  background-color: #f0f0f0;
+  margin: 5px auto;
+  margin-bottom: 10px;
+  width: 85%;
+  height: 16px;
+  border-radius: 18px;
+  text-align: left;
+  display: flex;
+  align-items: left;
+  font-weight: 575;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.custom-dropdown.active .dropdown-content {
+  display: block;
+}
+
+/* Button styles */
+.b1 {
+  font-family: "Montserrat";
+  position: relative;
+  background: #195aaf05;
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-size: 1rem;
+  overflow: hidden;
+  text-align: center;
+  color: #000;
+  transition: color 0.4s ease;
+  border: 0px;
+  box-shadow: 0px 1px 14px 0px #00000012;
+  cursor: pointer;
+}
+
+.b1 .text {
+  display: inline;
+  transition: opacity 0.4s ease;
+}
+
+.b1::after {
+  font-family: "Montserrat";
+  content: ">";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  font-size: 1rem;
+  color: #000;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease, left 0.4s ease;
+}
+
+.b1:hover {
+  background-color: rgba(222, 229, 248, 1);
+}
+
+.b1:hover .text {
+  opacity: 0;
+}
+
+.b1:hover::after {
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1.5);
+  animation: flash 1s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .large-wel {
+    font-size: 32px;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-group1 {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  .form-group1:last-of-type {
+    margin-left: 0;
+  }
+
+  .form-input,
+  .dropdown-button {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .dropdown-content {
+    width: 100%;
+  }
+
+  .form-container-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 80px;
+  }
+
+  .b1 {
+    padding: 0.375rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 2.5rem;
+  }
+
+  .central-button-container {
+    position: fixed;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .large-wel {
+    font-size: 2rem;
+  }
+
+  .small {
+    font-size: 0.875rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-group1 {
+    width: 100%;
+    max-width: 18.75rem;
+    margin: 0 auto 1.25rem;
+  }
+
+  .form-group1:last-of-type {
+    margin-left: 0;
+  }
+
+  .form-input,
+  .dropdown-button {
+    width: 100%;
+    padding: 0.625rem;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    width: 100%;
+  }
+
+  .form-container-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 5rem;
+  }
+
+  .central-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .large-wel {
+    font-size: 1.875rem;
+    width: 100%;
+    margin-top: 8.875rem;
+    margin-left: 0rem;
+  }
+
+  .small {
+    font-size: 1.125rem;
+    margin-bottom: 1.875rem;
+    margin-left: 0rem;
+  }
+
+  .form-container-reg {
+    padding: 0.625rem;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-group1 {
+    width: 100%;
+    margin-bottom: 3.125rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .form-input {
+    width: 70%;
+  }
+
+  .b1 {
+    padding: 0.375rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+  }
+
+  .central-button-container {
+    position: fixed;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1026px) and (min-width: 767px) {
+  .large-wel {
+    margin-top: 10rem;
+    font-size: 3.5rem;
+  }
+
+  .small {
+    font-size: 1.5rem;
+  }
+  .central-button-container {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
