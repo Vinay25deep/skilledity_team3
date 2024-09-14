@@ -17,7 +17,7 @@ const SidebarForm = ({ visible, onClose }) => {
   const handleGenderSelection = (genderValue) => {
     setGender(genderValue);
     form.setFieldsValue({ gender: genderValue });
-    setError(''); // Clear error when a gender is selected
+    setError('');
   };
 
   const onFinish = (values) => {
