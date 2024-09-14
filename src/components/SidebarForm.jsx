@@ -31,7 +31,6 @@ const SidebarForm = ({ visible, onClose }) => {
   };
 
   const onFinishFailed = () => {
-    // Handle the case when form validation fails, for example, focus on the first invalid field
   };
 
   return (
