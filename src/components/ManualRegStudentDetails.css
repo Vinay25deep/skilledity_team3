@@ -7,6 +7,10 @@ a{
     text-decoration: none;
 }
 
+.containerManualRegStudentDetails{
+    min-height: 100vh;
+}
+
 h1,p,a{
     margin: 0;
     padding: 0;
@@ -18,8 +22,7 @@ h1,p,a{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 8rem;
-
+    padding: 8rem 1rem;
 }
 
 .studentDetails{
@@ -71,7 +74,8 @@ h1,p,a{
 }
 
 .widgetStudents{
-    min-width: 50rem;
+    max-width: 40rem;
+    width: 40rem;
     height: 5rem;
     background-color: #F6F7FA;
     border-radius: 8px;
@@ -99,7 +103,7 @@ h1,p,a{
 }
 
 .addStudentsBtn{
-    min-width: 50rem;
+    max-width: 40rem;
     height: 5rem;
     border-radius: 8px;
     padding: 0 4rem;
@@ -109,6 +113,7 @@ h1,p,a{
     justify-content: center;
     gap: 0.5rem;
     font-weight: 600;
+    cursor: pointer;
     transition: .25s ease-in-out;
 }
 
@@ -119,4 +124,39 @@ h1,p,a{
 
 .plusIcon{
     font-size: 1.5rem;
+}
+
+@media (max-width:850px) {
+    .widgetStudents{
+        width: 20rem;
+        height: 4.5rem;
+        justify-content: space-evenly;
+    }
+    .addStudentsBtn{
+        height: 4.5rem;
+    }
+}
+
+@media (max-width:500px){
+    .widgetStudents{
+        width: auto;
+        padding: 0rem 3rem;
+        justify-content: center;
+    }
+
+    .schoolName{
+        font-size: 1.5rem;
+    }
+
+    .schoolNameTitle{
+        font-size: 1.15rem;
+    }
+    .studentName{
+        font-size: 
+        1.05rem
+        ;
+    }
+    .studentDetails{
+        font-size: 2rem;
+    }
 }
