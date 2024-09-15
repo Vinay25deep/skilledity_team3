@@ -9,7 +9,7 @@ const ForgotPasswordPage = () => {
     <div className="FPP-container">
       <div className="email-form">
         <h2>Forgot Password</h2>  
-        <p> Reset your Password with a link</p>
+        
         <div>
         <form className='container'> 
           <div className="FPP-form-group">
