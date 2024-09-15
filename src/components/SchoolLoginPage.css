@@ -40,9 +40,10 @@ p {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
+  margin-top: 19px;
 }
 
 .forgot-password {
