@@ -34,5 +34,6 @@ const ForgotPasswordPage = () => {
     </div>
   );
 };
+// Added hamburger icon 
 
 export default ForgotPasswordPage;
