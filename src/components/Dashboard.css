@@ -1,239 +1,238 @@
 .dashboard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-height: 100vh;
-    margin-left: 6%;
-    margin-top: 9%;
-    padding:1rem;
-  }
-  
-  .dashboard-header {
-    text-align: left;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin-left: 6%;
+  margin-top: 9%;
+  padding:1rem;
+}
 
-  }
-  
-  .dashboard-header h1 {
-    font-size: 36px;
-    margin: 0;
-  }
-  .school-name{
-    font-size: 20px;
+.dashboard-header {
+  text-align: left;
+  margin-bottom: 40px;
+
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+.school-name{
+  font-size: 20px;
+color: black;
+margin-top: 10px;
+
+}
+.dashboard-header h1 span {
+  color: #55679C; 
+}
+
+.dashboard-header p {
+  font-size: 20px;
   color: black;
-  margin-top: 10px;
-  
-  }
-  .dashboard-header h1 span {
-    color: #55679C; 
-  }
-  
-  .dashboard-header p {
-    font-size: 20px;
-    color: black;
-  }
-  
-  .dashboard-content {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-  }
-  
-  .dashboard-content .card {
-    background-color: #fff;
-    border-radius: 12px;
-    border: 2px solid transparent;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px 100px 30px 100px;
-    text-align: center;
-    width: 250px;
-    justify-content: center;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
-    
-  }
-  .dashboard-content .card:hover {
-    border-color: #98A8D7; /* Only change the color, not the width */
-    box-shadow: rgba(0, 0, 0, 0.08);
-  }
+}
 
-  .dashboard-content button{
-    font-family: 'montserrat';
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
+.dashboard-content {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.dashboard-content .card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px 100px 30px 100px;
+  text-align: center;
+  width: 250px;
+  justify-content: center;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
   
-  .dashboard-content .card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+}
+.dashboard-content .card:hover {
+  border-color: #98A8D7; /* Only change the color, not the width */
+  box-shadow: rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-content button{
+  font-family: 'montserrat';
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dashboard-content .card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dashboard-content .card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  white-space: nowrap;
   
-  .dashboard-content .card p {
-    font-size: 14px;
-    margin-bottom: 20px;
-    white-space: nowrap;
-    
-  }
+}
+
+.dashboard-content .btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.dashboard-content .btn:hover,.dashboard-content .btn-manual:hover {
+  background-color: rgba(4, 8, 27, 0.85);
+
+}
+.dashboard-content .btn-manual {
+  background-color: black;
+  color: white;
   
-  .dashboard-content .btn {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  border:1px transparent;
+  padding: 10px 0px;
+  width:100px;
   
+}
+.dashboard-content .btn-csv {
+  background-color: white;
+  color: black;
+  padding: 10px 0px;
+  width:100px;
+  font-size: 15px;
+  border: 1px solid;
+  border-color:#DEE5F8;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2); 
+ }
+ .dashboard-content .btn-csv:hover{
+  background-color:#bec9e931;
+ }
 
-  .dashboard-content .btn:hover,.dashboard-content .btn-manual:hover {
-    background-color: rgba(4, 8, 27, 0.85);
+.button-group {
+  display: flex;
+  gap: 40px; /* Adjust the gap between buttons */
+  justify-content: center; /* Center the buttons inside the card */
+}
 
-  }
-  .dashboard-content .btn-manual {
-    background-color: black;
-    color: white;
-    
-    border:1px transparent;
-    padding: 10px 0px;
-    width:100px;
-    
-  }
-  .dashboard-content .btn-csv {
-    background-color: white;
-    color: black;
-    padding: 10px 0px;
-    width:100px;
-    font-size: 15px;
-    border: 1px solid;
-    border-color:#DEE5F8;
-    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2); 
-   }
-   .dashboard-content .btn-csv:hover{
-    background-color:#bec9e931;
-   }
+  @media (max-width: 768px) {
+    /* For tablets and medium screens */
+    .dashboard-container {
+      display: flex;
+      align-items:center;
+      justify-content: center;
+      margin-left:0;
+      margin-top: 0%;
+      margin-right:3%;
+      max-height: 100vh;
+    }
 
-  .button-group {
-    display: flex;
-    gap: 40px; /* Adjust the gap between buttons */
-    justify-content: center; /* Center the buttons inside the card */
-  }
+    .dashboard-header h1 {
+      margin-left: 1em;
+      margin-top: 1.5em;
+    }
 
-    @media (max-width: 768px) {
-      /* For tablets and medium screens */
-      .dashboard-container {
-        display: flex;
-        align-items:center;
-        justify-content: center;
-        margin-left:0;
-        margin-top: 0%;
-        margin-right:3%;
-        max-height: 100vh;
-      }
-
-      .dashboard-header h1 {
-        margin-left: 1em;
-        margin-top: 1.5em;
-      }
-
-      .dashboard-header p {
-        margin-left: 2em;
-      }
-      
-      .dashboard-content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .dashboard-content .card {
-        width: 80%;
-        padding: 20px;
-      }
-    
-      .dashboard-content .card h2 {
-        font-size: 20px;
-        
-      }
-    
-      .dashboard-content .card p {
-        font-size: 12px;
-      }
+    .dashboard-header p {
+      margin-left: 2em;
     }
     
-    @media (max-width: 480px) {
-      /* For mobile phones */
-      .dashboard-container {
-        margin: 0;
-        min-height: 100vh;
-      }
-    
-      .dashboard-header h1 {
-        font-size: 28px;
-        margin-left: 1em;
-        margin-right: 1em;
-      }
-      
-      .dashboard-header p,
-      .school-name {
-        font-size: 16px;
-        margin-left: 2em;
-      }
-    
-      .dashboard-content {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0 10px;
-      }
-    
-      .dashboard-content .card {
-        width: 79%;
-        padding: 20px;
-        
-      }
-    
-      .dashboard-content .card h2 {
-        font-size: 18px;
-      }
-    
-      .dashboard-content .card p {
-        font-size: 12px;
-      }
-    
-      .dashboard-content .btn {
-        padding: 8px 16px;
-      }
+    .dashboard-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
-    @media (max-width: 320px) {
-      /* For very small mobile screens */
-      .dashboard-header h1 {
-        font-size: 24px;
-      }
-      
-      .dashboard-header p,
-      .school-name {
-        font-size: 14px;
-      }
-    
-      .dashboard-content .card {
-        width: 100%;
-        padding: 15px;
-      }
-    
-      .dashboard-content .card h2 {
-        font-size: 16px;
-      }
-    
-      .dashboard-content .card p {
-        font-size: 10px;
-      }
-    
-      .dashboard-content .btn {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
+    .dashboard-content .card {
+      width: 80%;
+      padding: 20px;
     }
   
+    .dashboard-content .card h2 {
+      font-size: 20px;
+      
+    }
+  
+    .dashboard-content .card p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For mobile phones */
+    .dashboard-container {
+      margin: 0;
+      min-height: 100vh;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 28px;
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+    
+    .dashboard-header p,
+    .school-name {
+      font-size: 16px;
+      margin-left: 2em;
+    }
+  
+    .dashboard-content {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0 10px;
+    }
+  
+    .dashboard-content .card {
+      width: 79%;
+      padding: 20px;
+      
+    }
+  
+    .dashboard-content .card h2 {
+      font-size: 18px;
+    }
+  
+    .dashboard-content .card p {
+      font-size: 12px;
+    }
+  
+    .dashboard-content .btn {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    /* For very small mobile screens */
+    .dashboard-header h1 {
+      font-size: 24px;
+    }
+    
+    .dashboard-header p,
+    .school-name {
+      font-size: 14px;
+    }
+  
+    .dashboard-content .card {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .dashboard-content .card h2 {
+      font-size: 16px;
+    }
+  
+    .dashboard-content .card p {
+      font-size: 10px;
+    }
+  
+    .dashboard-content .btn {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
