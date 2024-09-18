@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./SidebarForm.css";
+import "../CSS/SidebarForm.css";
 import { Form, Input, DatePicker } from "antd";
-import Close from "./close.svg";
-import Img from './Other.png';
+import Close from "../close.svg";
+import Img from '../Other.png';
 import { useNavigate } from 'react-router-dom';
 
 const { Item } = Form;

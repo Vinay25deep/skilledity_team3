@@ -1,6 +1,6 @@
 
-import './ManualReg.css';
-import Img from './Other.png';
+import '../CSS/ManualReg.css';
+import Img from '../Other.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 

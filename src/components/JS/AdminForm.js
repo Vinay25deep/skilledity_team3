@@ -1,4 +1,4 @@
-import './AdminForm.css';
+import '../CSS/AdminForm.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 

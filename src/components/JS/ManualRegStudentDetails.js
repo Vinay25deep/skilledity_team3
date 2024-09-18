@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./StudentOptions.css";
+import "../CSS/ManualRegStudentDetails.css";
 import SidebarForm from "./SidebarForm";
 
-const StudentOptions = () => {
+const ManualStudentDetails = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const showForm = () => setIsFormVisible(true);
@@ -30,13 +30,10 @@ const StudentOptions = () => {
               <div className="widgetStudents">
                 <div className="smallWidgetName">S</div>
                 <h1 className="studentName">S Chandramouli</h1>
-                <button className="infoButton">Info</button>
               </div>
-              <div className="widgetStudents">
-                <div className="smallWidgetName">S</div>
-                <h1 className="studentName">S Sitaraman</h1>
-                <button className="infoButton">Info</button>
-              </div>
+            </div>
+            <div className="addStudentsBtn" onClick={showForm}>
+              <span className="plusIcon">+ </span> Add Student
             </div>
           </div>
         </div>
@@ -45,4 +42,4 @@ const StudentOptions = () => {
   );
 };
 
-export default StudentOptions;
+export default ManualStudentDetails;

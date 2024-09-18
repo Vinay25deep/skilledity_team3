@@ -1,16 +1,16 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import './SchoolLoginPage.css'; 
+import '../CSS/SchoolLoginPage.css'; 
 
 
-const SchoolLoginPage = () => {
+const AdminLogin = () => {
   const navigate = useNavigate()
   return (
     <div className="login-container">
       <div className="login-form">
         <h1>Welcome!</h1>  
         <h3>Sign in to</h3>
-        <p> the School Login portal</p>
+        <p> the Admin Login portal</p>
         <div>
         <form className='container'> 
           <div className="form-group">
@@ -29,7 +29,7 @@ const SchoolLoginPage = () => {
           <button type="submit" onClick={(e) => {
               e.preventDefault(); 
               const schoolName = "Apeejay School, NOIDA"; // sample school name
-              navigate('/dashboard', { state: { schoolName } });}}>Login</button>
+              navigate('/admin-form', { state: { schoolName } });}}>Login</button>
         </form>
         </div>
       </div>
@@ -40,4 +40,4 @@ const SchoolLoginPage = () => {
   );
 };
 
-export default SchoolLoginPage;
+export default AdminLogin;
