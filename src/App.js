@@ -10,6 +10,10 @@ import UploadCSV from "./components/UploadCSV";
 import Register from "./components/ManualReg";
 import Welcome from "./components/WelcomePg";
 import ManualStudentDetails from "./components/ManualRegStudentDetails";
+import StudentDetails from "./components/StudentDetails";
+import StudentOptions from "./components/StudentOptions";
+import AdminLogin from "./components/AdminLogin";
+import AdminForm from "./components/AdminForm";
 function App() {
   return (
     <DataProvider>
@@ -25,6 +29,10 @@ function App() {
             <Route path="welcome" element={<Welcome />} />
             <Route path="manual-register-student" element={<Register />} />
             <Route path="manual-register-students" element={<ManualStudentDetails />} />
+            <Route path="student-details" element={<StudentDetails />} />
+            <Route path="student-options" element={<StudentOptions />} />
+            <Route path="admin-login" element={<AdminLogin />} />
+            <Route path="admin-form" element={<AdminForm />} />
           </Routes>
         </div>
       </BrowserRouter>

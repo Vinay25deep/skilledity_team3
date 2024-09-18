@@ -57,7 +57,7 @@ function LoginPortal() {
             <p className="card-text">Accessing your admin portal.</p>
           </div>
           <a href="/admin-login">
-            <button className="btnLogin">Login</button>
+            <button onClick={() => navigate('admin-login')} className="btnLogin">Login</button>
           </a>
         </div>
       </div>
