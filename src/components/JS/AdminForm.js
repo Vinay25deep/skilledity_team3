@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function AdminForm() {
   const navigate = useNavigate();
+  const [schoolId, setSchoolId] = useState('');
   const [schoolName, setSchoolName] = useState('');
   const [schoolAddress, setSchoolAddress] = useState('');
   const [schoolEmail, setSchoolEmail] = useState('');
@@ -11,10 +12,16 @@ function AdminForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!schoolName || !schoolAddress || !schoolEmail) {
+    if (!schoolId || !schoolName || !schoolAddress || !schoolEmail) {
       alert('Please fill in all fields.');
       return;
     }
+
+    // You can handle the form submission here, for example:
+    // submitForm({ schoolId, schoolName, schoolAddress, schoolEmail });
+
+    // Navigate to another page if needed
+    // navigate('/some-route');
   };
 
   return (
@@ -28,6 +35,16 @@ function AdminForm() {
       <form id="reg-form" onSubmit={handleSubmit}>
         <div className="reg-form-container">
           <div className="form-column">
+            <div className="input-field">
+              <label>School ID</label>
+              <input
+                type="text"
+                placeholder="Enter the School's ID"
+                value={schoolId}
+                onChange={(e) => setSchoolId(e.target.value)}
+                required
+              />
+            </div>
             <div className="input-field">
               <label>School Name</label>
               <input
@@ -60,6 +77,7 @@ function AdminForm() {
             </div>
           </div>
         </div>
+        
         <button id="b1-btn" className="b1" type="submit">
           <span className="text">Proceed</span>
         </button>
@@ -69,3 +87,4 @@ function AdminForm() {
 }
 
 export default AdminForm;
+
