@@ -28,7 +28,7 @@ a {
 }
 
 .studentDetails {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   font-weight: 600;
   margin-top: 0rem;
@@ -52,24 +52,24 @@ a {
 }
 
 .schoolNameTitle {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .schoolName {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #55679c;
 }
 
 .classSection {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .students {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin: 0.5rem 0;
 }
@@ -77,7 +77,7 @@ a {
 .widgetStudents {
   max-width: 40rem;
   width: 35rem;
-  height: 2.75rem;
+  height: 3rem;
   background-color: #f6f7fa;
   border-radius: 8px;
   padding: 0 1.5rem;
@@ -87,8 +87,8 @@ a {
   gap: 2rem;
 }
 .smallWidgetName {
-  width: 2rem;
-  height: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   background-color: #fff;
   border: 1.5px solid #9a9a9a;
   border-radius: 70%;
@@ -99,13 +99,13 @@ a {
   font-weight: 600;
 }
 .studentName {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
 .addStudentsBtn {
   max-width: 40rem;
-  height: 2.75rem;
+  height: 3rem;
   border-radius: 8px;
   padding: 0 4rem;
   border: #dee5f8 solid 2px;
