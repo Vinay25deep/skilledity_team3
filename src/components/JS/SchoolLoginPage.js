@@ -22,9 +22,12 @@ const SchoolLoginPage = () => {
             <input type="password" id="password" placeholder="Enter your Password" />
           </div>
           <div className="form-group-inline">
-            <div className="forgot-password" onClick={() => navigate('forgot-password')}>
-              <a href="/forgot-password">Forgot Password?</a>
-            </div>
+          <div className="forgot-password" onClick={(e) => {
+  e.preventDefault(); 
+  navigate('/forgot-password');
+}}>
+  <a href="/forgot-password" style={{ textDecoration: 'none' }}>Forgot Password?</a>
+</div>
           </div>
           <button type="submit" onClick={(e) => {
               e.preventDefault(); 
