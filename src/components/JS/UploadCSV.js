@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import './UploadCSV.css';
+import '../CSS/UploadCSV.css';
 
 function UploadCSV()
 {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {  useNavigate } from 'react-router-dom';
-import './Dashboard.css';
+import '../CSS/Dashboard.css';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ function Dashboard() {
           <h2>Student Details</h2>
           <p>Click the button below to edit student details</p>
           </div>
-          <button className="btn" onClick={() => navigate('/edit-details')}>Details</button>
+          <button className="btn" onClick={() => navigate('/student-details')}>Details</button>
         </div>
 
         <div className="card">

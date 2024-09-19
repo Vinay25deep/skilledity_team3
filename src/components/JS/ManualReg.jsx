@@ -1,9 +1,11 @@
 
-import './ManualReg.css';
-import Img from './Other.png';
+import '../CSS/ManualReg.css';
+import Img from '../Other.png';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
+  const navigate=useNavigate();
   const [gender, setGender] = useState('');
   const [error, setError] = useState('');
 
@@ -152,7 +154,7 @@ function Register() {
           </div>
         </div>
 
-        <button id="b1-btn"className="b1"> <span class="text">Proceed</span></button>
+        <button id="b1-btn"className="b1" onClick={() => navigate('/manual-register-students')}> <span class="text">Proceed</span></button>
       </form>
     </div>
   );

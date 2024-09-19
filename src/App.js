@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/JS/Navbar";
 import "./App.css";
-import LoginPortal from "./components/LoginPortal";
-import SchoolLoginPage from "./components/SchoolLoginPage";
-import Dashboard from "./components/Dashboard";
-import ForgotPasswordPage from "./components/ForgortPasswordPage";
+import LoginPortal from "./components/JS/LoginPortal";
+import SchoolLoginPage from "./components/JS/SchoolLoginPage";
+import Dashboard from "./components/JS/Dashboard";
+import ForgotPasswordPage from "./components/JS/ForgortPasswordPage";
 import { DataProvider } from "./context/dataContext";
-import UploadCSV from "./components/UploadCSV";
-import Register from "./components/ManualReg";
-import Welcome from "./components/WelcomePg";
-import ManualStudentDetails from "./components/ManualRegStudentDetails";
+import UploadCSV from "./components/JS/UploadCSV";
+import Register from "./components/JS/ManualReg";
+import Welcome from "./components/JS/WelcomePg";
+import ManualStudentDetails from "./components/JS/ManualRegStudentDetails";
+import StudentDetails from "./components/JS/StudentDetails";
+import StudentOptions from "./components/JS/StudentOptions";
+import AdminLogin from "./components/JS/AdminLogin";
+import AdminForm from "./components/JS/AdminForm";
 function App() {
   return (
     <DataProvider>
@@ -25,6 +29,10 @@ function App() {
             <Route path="welcome" element={<Welcome />} />
             <Route path="manual-register-student" element={<Register />} />
             <Route path="manual-register-students" element={<ManualStudentDetails />} />
+            <Route path="student-details" element={<StudentDetails />} />
+            <Route path="student-options" element={<StudentOptions />} />
+            <Route path="admin-login" element={<AdminLogin />} />
+            <Route path="admin-form" element={<AdminForm />} />
           </Routes>
         </div>
       </BrowserRouter>

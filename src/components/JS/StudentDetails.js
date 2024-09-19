@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './WelcomePg.css';
+import '../CSS/WelcomePg.css';
 
-function Welcome() {
+function StudentDetails() {
   const navigate = useNavigate();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedClass, setSelectedClass] = useState('Select Class');
@@ -49,16 +49,16 @@ function Welcome() {
       setError('Please select both Class and Section to proceed.');
     } else {
       setError('');
-      navigate('/manual-register-student');
+      navigate('/student-options');
     }
   };
 
   return (
     <div id="reg-student">
       <div className="large-wel">
-        Welcome <span style={{ color: 'rgba(85, 103, 156, 1)' }}>aboard!</span>
+        Student <span style={{ color: 'rgba(85, 103, 156, 1)' }}>Details!</span>
       </div>
-      <div className="small"> Select the class & section to proceed</div>
+      <div className="small"> Select the class & section to check student details</div>
       <div className="form-container-reg">
         <div className="form-row">
           <div className="form-group1" ref={dropdownRef}>
@@ -115,4 +115,4 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+export default StudentDetails;
