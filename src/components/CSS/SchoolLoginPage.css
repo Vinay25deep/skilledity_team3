@@ -23,7 +23,7 @@
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 14.4px;
-  opacity: 0px;
+  opacity: 1;
   border-top: 4.8px solid #55679c;
 }
 
@@ -59,6 +59,7 @@ p {
 .forgot-password a:hover {
   text-decoration: underline;
 }
+
 .form-group-inline {
   display: flex;
   justify-content: space-between;
@@ -117,10 +118,10 @@ input[type="password"]:focus {
   width: 350px;
   height: 466.86px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1;
 }
 
-@media (max-width: 1160px) and (min-width: 820px) {
+@media (max-width: 1160px) and (min-width: 800px) {
   body {
     overflow: hidden;
   }
@@ -141,6 +142,7 @@ input[type="password"]:focus {
   }
 
   .login-form h1 {
+    display: flex;
     font-size: 59px;
     margin-top: 4rem;
     margin-bottom: 5rem;
@@ -162,13 +164,6 @@ input[type="password"]:focus {
     padding: 0.6rem;
   }
 
-  .login-image {
-    display: none;
-    width: 0;
-    height: 0;
-    padding: 0;
-  }
-
   .forgot-password {
     a {
       font-size: 1.4rem;
@@ -188,68 +183,22 @@ input[type="password"]:focus {
       font-size: 24px;
     }
   }
-<<<<<<< HEAD
-  
-  @media (min-width: 768px) and (orientation:portrait){
-    .login-form {
-      /* padding: 25px; */
-      width:80%;
-      min-width: none;
-    }
-    .login-container{
-      max-height: 100vh;
-      padding-bottom: 20px;
-      padding-top: 20px;
-      overflow:hidden;
-      display: flex;
-      padding-left: 125px;
-      padding-right: 125px;
-    }
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    h3 {
-      font-size: 18px;
-    }
-  
-    p {
-      font-size: 14px;
-    }
-  
-    input[type="text"],
-    input[type="password"],
-    button[type="submit"] {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    .login-image{
-      width:0;
-      height:0;
-      padding:0;
-    }
-    
 
-    .login-image img {
-      display: none; 
-      width:0;
-      height:0;
-    }
+  .login-image {
+    display: block; /* Ensure visibility on laptops */
+    width: 50%;
   }
-=======
 
   .login-image img {
-    display: none;
-    width: 0;
-    height: 0; /* Hide the image on very small screens if necessary */
+    display: block;
+    width: 350px;
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
 @media (max-width: 480px) {
   .login-form {
+    display: flex;
     padding: 25px;
     width: 100%;
     min-width: none;
@@ -292,6 +241,6 @@ input[type="password"]:focus {
   .login-image img {
     display: none;
     width: 0;
-    height: 0; /* Hide the image on very small screens if necessary */
+    height: 0; /* Hide the image on small screens */
   }
 }
