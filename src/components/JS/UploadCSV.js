@@ -21,7 +21,7 @@ function UploadCSV()
         formData.append('file', file);
     
         try {
-          const response = await axios.post('http://ec2-52-66-8-80.ap-south-1.compute.amazonaws.com:3000/school/upload-csv', formData, {
+          const response = await axios.post('http://ec2-13-235-68-213.ap-south-1.compute.amazonaws.com:3000/school/upload-csv', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
