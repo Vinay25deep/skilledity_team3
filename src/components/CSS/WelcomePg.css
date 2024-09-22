@@ -42,11 +42,14 @@
 }
 
 .central-button-container {
-  position: relative; /* Change to relative to allow scrolling */
-  margin-top: 225px; /* Maintain space from top */
-  margin-bottom: 10px;
+  position: fixed;
+  margin-top: 225px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 1);
   font-size: 20px;
@@ -137,6 +140,7 @@
   display: none;
   position: absolute;
   top: 100%;
+
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -250,7 +254,7 @@
   .dropdown-button {
     width: 100%;
     max-width: 100%;
-    padding: 0.5rem;
+    padding:0.5rem;
   }
 
   .custom-dropdown {
@@ -268,24 +272,12 @@
     justify-content: flex-start;
     padding-bottom: 80px;
   }
-
   .central-button-container {
-    position: relative; /* Ensure it scrolls with the content on mobile */
+    position: fixed;
     margin-bottom: 1rem;
-    width: 100%; /* Full width for mobile */
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px; /* Add some padding for better touch target */
-  }
-}
-
-@media (min-width: 769px) {
-  .central-button-container {
-    position: fixed; /* Keep fixed position for larger screens */
-    bottom: 20px; /* Space from bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
-    width: auto; /* Auto width for laptops */
   }
 }
 
@@ -317,7 +309,7 @@
   .form-input,
   .dropdown-button {
     width: 100%;
-    padding: 0.5rem;
+    padding:0.5rem;
   }
 
   .custom-dropdown {
@@ -344,10 +336,145 @@
 
 @media (max-width: 539px) {
   .large-wel {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
+    width: 100%;
+    margin-top: 8.875rem;
+    margin-left: 0rem;
   }
 
   .small {
-    font-size: 0.75rem;
+    font-size: 1.125rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+  }
+
+  .form-container-reg {
+    padding: 0.625rem;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-group1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .form-input {
+    width: 70%;
+    margin-bottom: 0px;
+    padding:0.5rem;
+  }
+/* 
+  .b1 {
+    padding: 0.375rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 0rem;
+  } */
+
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 540px) and (min-width: 540px) {
+  .large-wel {
+    font-size: 1.875rem;
+    width: 100%;
+    margin-top: 8.875rem;
+    margin-left: 0rem;
+  }
+
+  .small {
+    font-size: 1.125rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+  }
+
+  .form-container-reg {
+    padding: 0.625rem;
+  }
+
+  .form-row {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .form-group1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .dropdown-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .form-input {
+    width: 70%;
+    margin-bottom: 0px;
+    padding:0.5rem;
+  }
+/* 
+  .b1 {
+    padding: 0.375rem 1.25rem;
+    font-size: 0.875rem;
+    margin-top: 0rem;
+  } */
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1280px) {
+  .central-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.75rem;
+  }
+}
+
+@media (max-width: 1026px) and (min-width: 767px) {
+  .large-wel {
+    margin-top: 10rem;
+    font-size: 3.5rem;
+  }
+
+  .small {
+    font-size: 1.5rem;
+  }
+  .central-button-container {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  input[type="text"], input[type="password"], button[type="submit"] {
+      font-size: 14px;
+      padding: 0.5rem;
   }
 }
