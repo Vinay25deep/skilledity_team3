@@ -18,7 +18,7 @@ a {
   padding: 0;
   text-decoration: none;
   color: inherit;
-}
+} 
 
 .container-students {
   display: flex;
@@ -126,13 +126,13 @@ a {
 .plusIcon {
   font-size: 1.5rem;
 }
-img{
+.info-image{
   width:18px;
   height: auto;
   margin-left: auto;
 }
 
-img:hover{
+.info-image:hover{
   cursor: pointer;
 }
 
