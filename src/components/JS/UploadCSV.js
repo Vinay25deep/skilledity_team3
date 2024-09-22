@@ -4,9 +4,41 @@ import '../CSS/UploadCSV.css';
 function UploadCSV()
 {
     const [file, setFile] = useState(null);
+    const [uploadStatus, setUploadStatus] = useState('');
+
     const handleFileChange = (event) => {
         setFile(event.target.files[0]);
       };
+    
+      const handleFileUpload = async () => {
+        if (!file) {
+          setUploadStatus('Please select a CSV file first.');
+          return;
+        }
+    
+        const formData = new FormData();
+        formData.append('file', file);
+    
+        try {
+          const response = await axios.post('http://ec2-52-66-8-80.ap-south-1.compute.amazonaws.com:3000/school/upload-csv', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          });
+          console.log(response)
+          // Handle success response
+          if (response.data && response.data.success) {
+            setUploadStatus('File uploaded successfully!');
+          } else {
+            setUploadStatus(response.data.message || 'Failed to upload file. Try uploading again.');
+          }
+        } catch (error) {
+          // Handle error from backend
+          setUploadStatus('Error uploading file. Please try again later.');
+        }
+      };
+
+
     return (
         <div className="upload-csv-container">
             <div className='csv-header'>
@@ -28,10 +60,11 @@ function UploadCSV()
                         </label>
                 </div>
             <div className='btn-container'>
-          <button className='btn-upload'>Upload</button>
-          </div>        
+              <button className='btn-upload' onClick={handleFileUpload}>Upload</button>
+            </div>  
+          {uploadStatus && <p className="upload-status">{uploadStatus}</p>} {/* Status message */}
         </div>
-        </div>
+      </div>
       );
 
 }
