@@ -126,6 +126,16 @@ a {
 .plusIcon {
   font-size: 1.5rem;
 }
+img{
+  width:18px;
+  height: auto;
+  margin-left: auto;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
 
 @media (max-width: 850px) {
   .widgetStudents {
