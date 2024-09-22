@@ -1,0 +1,260 @@
+.student-info-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 5rem;
+}
+
+.student-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0;
+    padding-right: 20px; 
+    text-align: left; 
+    white-space: nowrap;
+}
+
+.prof-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+.student-avatar h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.student-details-1, .student-details-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.student-details-1 p, .student-details-2 p {
+    font-size: 16px;
+    color: black;
+    margin: 8px 0;
+}
+
+.blue-bold {
+    color: #55679C;
+    font-weight: bold;
+}
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+    padding: 20px 0;
+    margin-left :120px;
+    width: 90%;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+.performance-card {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.perf-header {
+    text-align: left; /* Align the header to the left */
+    margin-bottom: 10px; /* Add some space between the title and the content */
+}
+
+.perf-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.perf-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.performance-graph {
+    width: 60%; /* Adjust width for the graph */
+    height: 250px;
+    background-color: #ddd;
+    margin-right: 20px; /* Space between the graph and data */
+}
+
+.perf-data {
+    width: 35%; /* Adjust the width of the data section */
+    text-align: left;
+}
+
+.perf-data p {
+    margin-bottom: 20px;
+}
+.attendance-card {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    width: 48%;
+}
+
+.attendance-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+.perf-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.attendance-graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attendance-graph .course-progress {
+    margin-bottom: 20px;
+}
+.course-progress p{
+    font-weight: bold;
+}
+
+.go-back-btn {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 120px;
+    font-family: 'montserrat';
+
+  }
+  
+  .go-back-btn:hover {
+    background-color: rgba(4, 8, 27, 0.85);
+  }
+
+@media (max-width: 768px) {
+    .info-page-container {
+      padding: 10px;
+    }
+    
+    .student-info-card, .performance-card, .attendance-card {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .student-avatar, .student-details-1, .student-details-2 {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .performance-card, .attendance-card {
+      width: 100%; 
+      margin-bottom: 20px;
+    }
+  
+    .performance-graph, .perf-data {
+      width: 100%; 
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-page-container {
+      padding: 5px;
+    }
+  
+    .student-info-card, .performance-card, .attendance-card {
+      flex-direction: column;
+      padding: 10px;
+      width: 80%;
+    }
+  
+    .student-avatar, .student-details-1, .student-details-2 {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .prof-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin-bottom: 10px;
+    }
+  
+    .performance-card, .attendance-card {
+      width: 100%;
+      margin-bottom: 20px;
+      flex-direction: column; 
+    }
+  
+    .performance-graph, .perf-data, .attendance-data {
+      width: 50%;
+      margin-bottom: 15px;
+    }
+  
+    .student-avatar h3, .student-details-1 p, .student-details-2 p, .perf-data p {
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 320px) {
+    .student-info-card {
+       
+        width: 50%;
+        margin-top: 5rem;
+    }
+    .student-avatar h3 {
+      font-size: 18px;
+    }
+  
+    .student-details-1 p, .student-details-2 p, .perf-data p {
+      font-size: 12px;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .performance-card, .attendance-card {
+      width: 50%;
+      height:auto;
+    }
+  
+    .performance-graph {
+      width: 50%;
+      height:auto;
+    }
+    .perf-data{
+        width: 50%;
+        height:50px;
+    }
+  }

@@ -18,7 +18,7 @@ a {
   padding: 0;
   text-decoration: none;
   color: inherit;
-}
+} 
 
 .container-students {
   display: flex;
@@ -126,6 +126,16 @@ a {
 .plusIcon {
   font-size: 1.5rem;
 }
+.info-image{
+  width:18px;
+  height: auto;
+  margin-left: auto;
+}
+
+.info-image:hover{
+  cursor: pointer;
+}
+
 
 @media (max-width: 850px) {
   .widgetStudents {

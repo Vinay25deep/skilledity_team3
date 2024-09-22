@@ -14,6 +14,8 @@ import StudentDetails from "./components/JS/StudentDetails";
 import StudentOptions from "./components/JS/StudentOptions";
 import AdminLogin from "./components/JS/AdminLogin";
 import AdminForm from "./components/JS/AdminForm";
+import InfoPage from "./components/JS/InfoPage";
+
 function App() {
   return (
     <DataProvider>
@@ -33,6 +35,8 @@ function App() {
             <Route path="student-options" element={<StudentOptions />} />
             <Route path="admin-login" element={<AdminLogin />} />
             <Route path="admin-form" element={<AdminForm />} />
+            <Route path="info-page" element={<InfoPage />} />
+           
           </Routes>
         </div>
       </BrowserRouter>
