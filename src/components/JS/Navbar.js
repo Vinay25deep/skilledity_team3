@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
+import { clearSchoolData } from '../../redux/reducers/authSlice';
 import "../CSS/Header.css";
 
 function Header() {
   const location = useLocation(); 
   const navigate = useNavigate(); 
+  const dispatch = useDispatch();
   const [menuOpen, setMenuOpen] = useState(false); // State for menu visibility
 
   let buttonText = "Logout";
@@ -19,6 +22,8 @@ function Header() {
   }
 
   const handleLogout = () => {
+    // Inside the component, call dispatch to clear the state
+    dispatch(clearSchoolData());
     if (buttonText === "Logout") {
       navigate("/"); 
     }

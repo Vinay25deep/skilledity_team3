@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../CSS/StudentOptions.css";
 import SidebarForm from "./SidebarForm";
 
 const StudentOptions = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
-
-  const showForm = () => setIsFormVisible(true);
   const hideForm = () => setIsFormVisible(false);
 
   return (

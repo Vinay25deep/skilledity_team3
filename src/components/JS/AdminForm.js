@@ -1,9 +1,7 @@
 import '../CSS/AdminForm.css';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function AdminForm() {
-  const navigate = useNavigate();
   const [schoolId, setSchoolId] = useState('');
   const [schoolName, setSchoolName] = useState('');
   const [schoolAddress, setSchoolAddress] = useState('');

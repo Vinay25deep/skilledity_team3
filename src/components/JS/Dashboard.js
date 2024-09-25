@@ -1,11 +1,11 @@
 import React from 'react';
 import {  useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import '../CSS/Dashboard.css';
 
 function Dashboard() {
   const navigate = useNavigate();
-
-  const  schoolName  = 'Apeejay School, NOIDA' ;
+  const schoolName = useSelector((state) => state.auth.schoolName);
 
   return (
     <div className="dashboard-container">

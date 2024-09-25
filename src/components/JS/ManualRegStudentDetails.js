@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../CSS/ManualRegStudentDetails.css";
 import SidebarForm from "./SidebarForm";
 
