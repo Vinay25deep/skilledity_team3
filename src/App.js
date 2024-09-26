@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React,{useState} from 'react';
+import React, { useState, useEffect } from 'react'; 
 import Navbar from "./components/JS/Navbar";
 import "./App.css";
 import LoginPortal from "./components/JS/LoginPortal";
@@ -15,49 +15,45 @@ import StudentOptions from "./components/JS/StudentOptions";
 import AdminLogin from "./components/JS/AdminLogin";
 import AdminForm from "./components/JS/AdminForm";
 import { Navigate } from 'react-router-dom';
-import { useEffect } from "react";
-import {jwtDecode} from "jwt-decode";
-import { setForiegnKey } from './redux/reducers/authSlice';  // Import the Redux action
-import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
-
+import { jwtDecode } from "jwt-decode";
+import { setForiegnKey } from './redux/reducers/authSlice';  
+import { useDispatch } from 'react-redux';  
 
 function App() {
-  const token = localStorage.getItem("authToken");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const dispatch = useDispatch();
-  const [fkno,setFkno] = useState('');
+  const [fkno, setFkno] = useState('');
+
   useEffect(() => {
-    // Retrieve the token from localStorage or cookies
-    const token = localStorage.getItem("authToken"); // or Cookies.get('authToken')
+    // Retrieve the token from localStorage
+    const token = localStorage.getItem("authToken"); 
+    console.log("JWT Token:", token);
+
 
     if (token) {
       try {
         // Decode the token using jwt-decode
         const decodedToken = jwtDecode(token);
         
-        // Access the school_fk_no from the token payload
-        const schoolstudentFKNo = decodedToken.school_student_fk;
-        setFkno(schoolstudentFKNo);
-        console.log("School FK Number:",schoolstudentFKNo);
+        // Access the schoolId from the token payload
+        const schoolId = decodedToken.schoolId; // Updated according to your payload
+        setFkno(schoolId);
+        console.log("Decoded schoolId:", schoolId);
+
+        dispatch(setForiegnKey({ school_student_fk: schoolId })); // Ensure this matches your state management needs
+        setIsAuthenticated(true);
       } catch (error) {
         console.error("Invalid token", error);
       }
     } else {
       console.log("No token found.");
     }
-  }, []);
+  }, [dispatch]);
 
-  const PrivateRoute = ({ children, isAuthenticated }) => {
+  const PrivateRoute = ({ children }) => {
     return isAuthenticated ? children : <Navigate to="/" />;
   };
-  
-  if (token) {
-    console.log("Token exists:", token);
-    dispatch(setForiegnKey({ school_student_fk: fkno }));
-    setIsAuthenticated(true);
-  } else {
-    console.log("No token found.");
-  }
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -71,42 +67,42 @@ function App() {
 
           {/* Private Routes */}
           <Route path="dashboard" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <Dashboard />
             </PrivateRoute>
           }/>
           <Route path="upload-csv" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <UploadCSV />
             </PrivateRoute>
           }/>
           <Route path="welcome" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <Welcome />
             </PrivateRoute>
           }/>
           <Route path="manual-register-student" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <Register />
             </PrivateRoute>
           }/>
           <Route path="manual-register-students" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <ManualStudentDetails />
             </PrivateRoute>
           }/>
           <Route path="student-details" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <StudentDetails />
             </PrivateRoute>
           }/>
           <Route path="student-options" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <StudentOptions />
             </PrivateRoute>
           }/>
           <Route path="admin-form" element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
+            <PrivateRoute>
               <AdminForm />
             </PrivateRoute>
           }/>

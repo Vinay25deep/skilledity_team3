@@ -21,7 +21,7 @@ const SchoolLoginPage = () => {
       const response = await axios.post('https://api.skilledity.in/school-login', {
         email: username,
         password: password,
-      });
+      }, { withCredentials: true });
 
       const { school_name, school_id } = response.data;
 
