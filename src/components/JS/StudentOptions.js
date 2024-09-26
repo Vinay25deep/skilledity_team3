@@ -1,14 +1,10 @@
 import { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
 import "../CSS/StudentOptions.css";
 import SidebarForm from "./SidebarForm";
 
 const StudentOptions = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const navigate = useNavigate();
-  const showForm = () => setIsFormVisible(true);
   const hideForm = () => setIsFormVisible(false);
-  
 
   return (
     <div className="containerManualRegStudentDetails">

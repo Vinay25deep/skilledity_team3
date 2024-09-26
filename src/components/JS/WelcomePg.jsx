@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../CSS/WelcomePg.css';
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
+import { setClassData } from '../../redux/reducers/authSlice';  // Import the Redux action
 
 function Welcome() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedClass, setSelectedClass] = useState('Select Class');
   const [section, setSection] = useState('');
@@ -49,6 +52,7 @@ function Welcome() {
       setError('Please select both Class and Section to proceed.');
     } else {
       setError('');
+      dispatch(setClassData({ std_class: selectedClass, section: section }));
       navigate('/manual-register-student');
     }
   };

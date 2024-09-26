@@ -4,10 +4,37 @@ import { Form, Input, DatePicker } from "antd";
 import Close from "../close.svg";
 import Img from '../Other.png';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
+import { addStudent } from '../../redux/reducers/authSlice';  // Import the Redux action
+import axios from 'axios';
 
 const { Item } = Form;
 
 const SidebarForm = ({ visible, onClose }) => {
+  const Section = useSelector((state) => state.auth.section);
+  const Class = useSelector((state) => state.auth.std_class);
+  const student_school_fk = useSelector((state) => state.auth.student_school_fk);
+  const dispatch = useDispatch();
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    dob: '',
+    std_class: Class,
+    section: Section,
+    contact_no: '',
+    student_id: '',
+    father_name: '',
+    gender: '',
+    email: '',
+    student_school_fk: student_school_fk
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const [form] = Form.useForm();
   const navigate = useNavigate();
   
@@ -15,23 +42,52 @@ const SidebarForm = ({ visible, onClose }) => {
   const [error, setError] = useState('');
 
   const handleGenderSelection = (genderValue) => {
-    setGender(genderValue);
-    form.setFieldsValue({ gender: genderValue });
-    setError('');
+  // Update the form field value and formData state
+  setGender(genderValue);
+  setFormData({ ...formData, gender: genderValue });
+  form.setFieldsValue({ gender: genderValue });  // For validation purposes
+  setError('');
+};
+
+
+  const handleDateChange = (date, dateString) => {
+    setFormData({ ...formData, dob: dateString });
   };
 
-  const onFinish = (values) => {
+  const onFinishFailed = () => {
+  };
+
+  const onFinish = async (event , values) => {
+    console.log(formData);
+    const { gender } = formData;
     if (!gender) {
       setError('Please select a gender.');
+      return;
     } else {
       console.log("Form Values:", values);
       onClose();
       navigate('/manual-register-students');
     }
-  };
+    console.log(formData);
 
-  const onFinishFailed = () => {
-  };
+    try {
+      const response = await axios.post(
+        'https://api.skilledity.in/school/register-student',
+        formData
+      );
+      console.log(response.data); // Handle success response
+      if(response.status === 200 && response.data.success){
+        dispatch(addStudent(formData.name));
+        navigate('/manual-register-students');
+      }
+      else{
+        setError('Registration failed');
+      }
+    } catch (error) {
+      console.error('There was an error submitting the form!', error); // Handle error response
+    }
+  };    
+
 
   return (
     <div className={`containerSidebarForm ${visible ? 'visible' : 'hidden'}`}>
@@ -53,7 +109,7 @@ const SidebarForm = ({ visible, onClose }) => {
               name="name"
               rules={[{ required: true, message: "Please input your name!" }]}
             >
-              <Input placeholder="Enter your name" />
+              <Input name='name' onChange={handleInputChange} placeholder="Enter your name" />
             </Item>
 
             <Item
@@ -62,7 +118,7 @@ const SidebarForm = ({ visible, onClose }) => {
               name="fatherName"
               rules={[{ required: true, message: "Please input your father's name!" }]}
             >
-              <Input placeholder="Enter father's name" />
+              <Input name="father_name"  onChange={handleInputChange} placeholder="Enter father's name" />
             </Item>
 
             <Item
@@ -71,7 +127,7 @@ const SidebarForm = ({ visible, onClose }) => {
               name="admissionNo"
               rules={[{ required: true, message: "Please input the admission number!" }]}
             >
-              <Input placeholder="Enter admission number" />
+              <Input name='student_id' onChange={handleInputChange} placeholder="Enter admission number" />
             </Item>
 
             <Item
@@ -83,7 +139,7 @@ const SidebarForm = ({ visible, onClose }) => {
                 { pattern: /^[0-9]{10}$/, message: "Please enter a valid 10-digit contact number!" },
               ]}
             >
-              <Input placeholder="Enter student contact number" />
+              <Input name='contact_no' onChange={handleInputChange} placeholder="Enter student contact number" />
             </Item>
 
             <Item
@@ -92,7 +148,7 @@ const SidebarForm = ({ visible, onClose }) => {
               name="dob"
               rules={[{ required: true, message: "Please select your date of birth!" }]}
             >
-              <DatePicker placeholder="Select date of birth" />
+              <DatePicker name='dob' onChange={handleDateChange} placeholder="Select date of birth" />
             </Item>
 
             <Item
@@ -149,7 +205,7 @@ const SidebarForm = ({ visible, onClose }) => {
                 { type: "email", message: "Please enter a valid email address!" },
               ]}
             >
-              <Input placeholder="Enter email address" />
+              <Input name='email' onChange={handleInputChange} placeholder="Enter email address" />
             </Item>
 
             <div className="containerBtnProceedSidebar">
