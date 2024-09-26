@@ -5,6 +5,8 @@ import Close from "../close.svg";
 import Img from '../Other.png';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
+import { addStudent } from '../../redux/reducers/authSlice';  // Import the Redux action
 import axios from 'axios';
 
 const { Item } = Form;
@@ -12,7 +14,9 @@ const { Item } = Form;
 const SidebarForm = ({ visible, onClose }) => {
   const Section = useSelector((state) => state.auth.section);
   const Class = useSelector((state) => state.auth.std_class);
-
+  const student_school_fk = useSelector((state) => state.auth.student_school_fk);
+  const dispatch = useDispatch();
+  
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -23,7 +27,7 @@ const SidebarForm = ({ visible, onClose }) => {
     father_name: '',
     gender: '',
     email: '',
-    student_school_fk: 'ADM123'
+    student_school_fk: student_school_fk
   });
 
   const handleInputChange = (e) => {
@@ -73,6 +77,7 @@ const SidebarForm = ({ visible, onClose }) => {
       );
       console.log(response.data); // Handle success response
       if(response.status === 200 && response.data.success){
+        dispatch(addStudent(formData.name));
         navigate('/manual-register-students');
       }
       else{

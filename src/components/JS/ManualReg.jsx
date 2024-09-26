@@ -4,13 +4,18 @@ import Img from '../Other.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
 import axios from 'axios';
+import { addStudent } from '../../redux/reducers/authSlice';  
+
 
 
 function Register() {
   const Section = useSelector((state) => state.auth.section);
   const Class = useSelector((state) => state.auth.std_class);
-
+  const student_school_fk = useSelector((state) => state.auth.student_school_fk);
+  const dispatch = useDispatch();
+  
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -21,7 +26,7 @@ function Register() {
     father_name: '',
     gender: '',
     email: '',
-    student_school_fk: 'ADM123'
+    student_school_fk: student_school_fk
   });
   const navigate = useNavigate();
   const [day, setDay] = useState('');
@@ -65,6 +70,7 @@ function Register() {
       );
       console.log(response.data); // Handle success response
       if(response.status === 200 && response.data.success){
+        dispatch(addStudent(formData.name));
         navigate('/manual-register-students');
       }
       else{

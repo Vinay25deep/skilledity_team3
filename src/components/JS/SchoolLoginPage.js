@@ -18,14 +18,14 @@ const SchoolLoginPage = () => {
     console.log(password);
     e.preventDefault();
     try {
-      const response = await axios.post('https://api.skilledity.in/login/school', {
+      const response = await axios.post('https://api.skilledity.in/school-login', {
         email: username,
         password: password,
       });
 
-      const { passwords_match, school_name, school_id } = response.data;
+      const { school_name, school_id } = response.data;
 
-      if (passwords_match) {
+      if (response.status===200) {
         // Dispatch the data to the Redux store
         dispatch(setSchoolData({ schoolName: school_name, schoolId: school_id }));
         navigate('/dashboard');
@@ -54,6 +54,7 @@ const SchoolLoginPage = () => {
               placeholder="Enter your username" 
               value={username}
               onChange={(e) => setUsername(e.target.value)} // Update username state
+              required
             />
           </div>
           <div className="form-group">
@@ -64,6 +65,7 @@ const SchoolLoginPage = () => {
               placeholder="Enter your Password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)} // Update password state
+              required
             />
           </div>
           <div className="form-group-inline">
