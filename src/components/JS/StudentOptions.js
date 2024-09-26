@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 import "../CSS/StudentOptions.css";
 import SidebarForm from "./SidebarForm";
 
 const StudentOptions = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const hideForm = () => setIsFormVisible(false);
+
+  const navigate = useNavigate();  // Initialize navigate
 
   return (
     <div className="containerManualRegStudentDetails">
@@ -27,13 +30,22 @@ const StudentOptions = () => {
               <div className="widgetStudents">
                 <div className="smallWidgetName">S</div>
                 <h1 className="studentName">S Chandramouli</h1>
-                <img className="info-image" alt='info' src='./SVGs/info.png' onClick={() => navigate('/info-page')}></img>
-                
+                <img 
+                  className="info-image" 
+                  alt='info' 
+                  src='./SVGs/info.png' 
+                  onClick={() => navigate('/info-page')}  // Use navigate
+                />
               </div>
               <div className="widgetStudents">
                 <div className="smallWidgetName">S</div>
                 <h1 className="studentName">S Sitaraman</h1>
-                <img className="info-image" alt='info' src='./SVGs/info.png' onClick={() => navigate('/info-page')}></img>
+                <img 
+                  className="info-image" 
+                  alt='info' 
+                  src='./SVGs/info.png' 
+                  onClick={() => navigate('/info-page')}  // Use navigate
+                />
               </div>
             </div>
           </div>
