@@ -38,13 +38,13 @@ const SidebarForm = ({ visible, onClose }) => {
   const [error, setError] = useState('');
 
   const handleGenderSelection = (genderValue) => {
-    // Update the form field value and formData state
-    setGender(genderValue);
-    setFormData({ ...formData, gender: genderValue });
-    form.setFieldsValue({ gender: genderValue });  // For validation purposes
-    setError('');
-  };
-  
+  // Update the form field value and formData state
+  setGender(genderValue);
+  setFormData({ ...formData, gender: genderValue });
+  form.setFieldsValue({ gender: genderValue });  // For validation purposes
+  setError('');
+};
+
 
   const handleDateChange = (date, dateString) => {
     setFormData({ ...formData, dob: dateString });
@@ -68,7 +68,7 @@ const SidebarForm = ({ visible, onClose }) => {
 
     try {
       const response = await axios.post(
-        '',
+        'https://api.skilledity.in/school/register-student',
         formData
       );
       console.log(response.data); // Handle success response
