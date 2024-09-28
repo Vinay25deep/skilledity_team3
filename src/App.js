@@ -18,6 +18,7 @@ import InfoPage from "./components/JS/InfoPage";
 import LandingPage from "./components/JS/LandingPage";
 import AboutUs from "./components/JS/AboutUs";
 import OurTeam from "./components/JS/OurTeam";
+import BotpressChat from './BotpressChat';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="BotpressChat" element={<BotpressChat />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
