@@ -1,6 +1,7 @@
 import React, { useEffect, useState,useRef } from 'react';
-import Header from './Navbar1';
+import Header from './Navbar';
 import '../CSS/LandingPage.css';
+import Footer from './Footer';
 
 const words = ["skilledity", "Integrity", "Excellence"];
 const item_width=220;
@@ -262,6 +263,7 @@ function LandingPage() {
             </div>
 
       </div>
+      <Footer/>
     </>
   );
 }

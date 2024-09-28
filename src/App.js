@@ -18,8 +18,6 @@ import InfoPage from "./components/JS/InfoPage";
 import LandingPage from "./components/JS/LandingPage";
 import AboutUs from "./components/JS/AboutUs";
 import OurTeam from "./components/JS/OurTeam";
-import Footer from './components/JS/Footer';
-
 
 function App() {
   return (
@@ -29,7 +27,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="login-portal" element={<LoginPortal />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
@@ -42,12 +39,11 @@ function App() {
             <Route path="admin-login" element={<AdminLogin />} />
             <Route path="admin-form" element={<AdminForm />} />
             <Route path="info-page" element={<InfoPage />} />
-            {/* <Route path="landing-page" element={<LandingPage/>}/> */}
+            <Route path="login" element={<LoginPortal />} />
             <Route path="about-us" element={<AboutUs/>}/>
             <Route path="our-team" element={<OurTeam/>}/>
            
           </Routes>
-          <Footer />
         </div>
       </BrowserRouter>
     </DataProvider>

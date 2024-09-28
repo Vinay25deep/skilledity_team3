@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './Navbar1';
+import Header from './Navbar';
 import '../CSS/AboutUs.css';
+import Footer from './Footer';
 
 function AboutUs() {
   return (
@@ -30,6 +31,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

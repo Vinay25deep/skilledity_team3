@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../CSS/LoginPortal.css";
 
 function LoginPortal() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -21,9 +22,9 @@ function LoginPortal() {
             alt="student"
             className="card-img"
             draggable="false"
-          ></img>
+          />
           <div className="sub-card-text">
-            <h2 className="card-title">Student Login</h2> 
+            <h2 className="card-title">Student Login</h2>
             <p className="card-text">Accessing your student portal.</p>
           </div>
           <a href="/student-login">
@@ -36,14 +37,12 @@ function LoginPortal() {
             alt="school"
             className="card-img"
             draggable="false"
-          ></img>
+          />
           <div className="sub-card-text">
             <h2 className="card-title">School Login</h2>
             <p className="card-text">Accessing your school portal.</p>
           </div>
-          <a href="/school-login">
-            <button  onClick={() => navigate('school-login')} className="btnLogin">Login</button>
-          </a>
+          <button onClick={() => navigate('/school-login')} className="btnLogin">Login</button>
         </div>
         <div className="sub-card">
           <img
@@ -51,14 +50,12 @@ function LoginPortal() {
             alt=""
             className="card-img"
             draggable="false"
-          ></img>
+          />
           <div className="sub-card-text">
             <h2 className="card-title">Admin Login</h2>
             <p className="card-text">Accessing your admin portal.</p>
           </div>
-          <a href="/admin-login">
-            <button onClick={() => navigate('admin-login')} className="btnLogin">Login</button>
-          </a>
+          <button onClick={() => navigate('/admin-login')} className="btnLogin">Login</button>
         </div>
       </div>
     </section>
@@ -66,3 +63,4 @@ function LoginPortal() {
 }
 
 export default LoginPortal;
+
