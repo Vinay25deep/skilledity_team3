@@ -10,34 +10,34 @@
 
 // export default ChatBot;
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-function BotpressChat() {
+const BotpressChat = () => {
   useEffect(() => {
-    // Create first script tag
-    const script1 = document.createElement('script');
-    script1.src = 'https://cdn.botpress.cloud/webchat/v2.1/inject.js';
-    script1.async = true;
-    document.body.appendChild(script1);
+    // Load the Botpress chat widget script
+    const script = document.createElement('script');
+    script.src = 'https://cdn.botpress.cloud/webchat/v2.1/inject.js'; // Replace with your Botpress server URL
+    script.async = true;
+    document.body.appendChild(script);
 
-    // Create second script tag
-    const script2 = document.createElement('script');
-    script2.src = 'https://mediafiles.botpress.cloud/3ba0412a-5f83-4619-bc43-e7d3d2dead2d/webchat/v2.1/config.js';
-    script2.async = true;
-    document.body.appendChild(script2);
-
-    // Cleanup function to remove scripts when the component unmounts
-    return () => {
-      document.body.removeChild(script1);
-      document.body.removeChild(script2);
+    // Initialize the chat widget after the script is loaded
+    script.onload = () => {
+      window.botpressWebChat.init({
+        host: "http://localhost:3000",  // Replace with your Botpress server URL
+        botId: "79ba890d-6153-4c0d-bd58-1f4123ac3a61",  // Replace with your Bot ID
+        botName: "DoubtMaster Bot",  // Optional: Give your bot a name
+        showConversationsButton: true,
+        enableReset: true
+      });
     };
-  }, []); // Empty array ensures this effect runs only once after the initial render
 
-  return (
-    <div>
-      <h1>Botpress Chat Integration</h1>
-    </div>
-  );
-}
+    // Cleanup script when component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return null; // No need to render anything in the component itself
+};
 
 export default BotpressChat;

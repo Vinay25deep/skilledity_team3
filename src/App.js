@@ -18,7 +18,7 @@ import InfoPage from "./components/JS/InfoPage";
 import LandingPage from "./components/JS/LandingPage";
 import AboutUs from "./components/JS/AboutUs";
 import OurTeam from "./components/JS/OurTeam";
-import BotpressChat from './BotpressChat';
+import BotpressChat from './components/JS/BotpressChat';
 
 function App() {
   return (
