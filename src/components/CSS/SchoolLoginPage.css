@@ -146,12 +146,12 @@ input[type="password"]:focus {
     margin-top: 4rem;
     margin-bottom: 5rem;
   }
-
+ 
   h3 {
     font-size: 37px;
   }
 
-  p {
+  .login-form p {
     font-size: 20px;
   }
 

@@ -109,7 +109,7 @@ function OurTeam() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Nunc quis vehicula quam. Proin convallis purus nec justo venenatis.
       </p>
-    </div>
+    </div> 
   </div>
 </div>
 </div>
