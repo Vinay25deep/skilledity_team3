@@ -142,6 +142,7 @@ input[type="password"]:focus {
   }
 
   .login-form h1 {
+    display: flex;
     font-size: 59px;
     margin-top: 4rem;
     margin-bottom: 5rem;
@@ -197,6 +198,7 @@ input[type="password"]:focus {
 
 @media (max-width: 480px) {
   .login-form {
+    display: flex;
     padding: 25px;
     width: 100%;
     min-width: none;
