@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "../CSS/ManualRegStudentDetails.css";
 import SidebarForm from "./SidebarForm";
+import { useSelector } from 'react-redux';
 
 const ManualStudentDetails = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
-
+  const schoolName = useSelector((state) => state.auth.school_name);
+  const section = useSelector((state) => state.auth.section);
+  const std_class = useSelector((state) => state.auth.std_class);
+  const students = useSelector((state) => state.auth.students);
   const showForm = () => setIsFormVisible(true);
   const hideForm = () => setIsFormVisible(false);
 
@@ -21,16 +24,22 @@ const ManualStudentDetails = () => {
             <div className="containerDesc">
               <h1 className="schoolNameTitle">School Name</h1>
               <div className="containerSchoolClassSection">
-                <h1 className="schoolName">Apeejay School, NOIDA</h1>
-                <h1 className="classSection">Class & Section</h1>
+                <h1 className="schoolName">{schoolName}</h1>
+                <h1 className="classSection">{std_class} {section}</h1>
               </div>
             </div>
             <div className="containerDisplayStudents">
               <h1 className="students">Students</h1>
-              <div className="widgetStudents">
-                <div className="smallWidgetName">S</div>
-                <h1 className="studentName">S Chandramouli</h1>
-              </div>
+              {students.length === 0 ? (
+                <p>No students have been added yet.</p>
+              ) : (
+                students.map((student, index) => (
+                  <div key={index} className="widgetStudents">
+                    <div className="smallWidgetName">{student.charAt(0)}</div>
+                    <h1 className="studentName">{student}</h1>
+                  </div>
+                ))
+              )}
             </div>
             <div className="addStudentsBtn" onClick={showForm}>
               <span className="plusIcon">+ </span> Add Student
