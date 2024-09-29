@@ -23,7 +23,7 @@ const BotpressChat = () => {
     // Initialize the chat widget after the script is loaded
     script.onload = () => {
       window.botpressWebChat.init({
-        host: "http://localhost:3000",  // Replace with your Botpress server URL
+        host: "https://mediafiles.botpress.cloud/3ba0412a-5f83-4619-bc43-e7d3d2dead2d/webchat/v2.1/config.js",  
         botId: "79ba890d-6153-4c0d-bd58-1f4123ac3a61",  // Replace with your Bot ID
         botName: "DoubtMaster Bot",  // Optional: Give your bot a name
         showConversationsButton: true,
