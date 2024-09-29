@@ -27,7 +27,7 @@ const SidebarForm = ({ visible, onClose }) => {
     father_name: '',
     gender: '',
     email: '',
-    student_school_fk: school_id
+   
   });
 
   const handleInputChange = (e) => {
