@@ -18,6 +18,7 @@ import InfoPage from "./components/JS/InfoPage";
 import LandingPage from "./components/JS/LandingPage";
 import AboutUs from "./components/JS/AboutUs";
 import OurTeam from "./components/JS/OurTeam";
+import botAvatar from './components/Images/doubtMasterAvatar.png'; // Adjust the path as necessary
 
 // Importing Botpress Webchat components
 import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
@@ -78,13 +79,14 @@ function App() {
                 display: isWebchatOpen ? "block" : "none",
                 width: "400px",
                 height: "600px",
+                bpHeaderContentAvatarFallback: "botAvatar",
               }}
             >
               {/* Webchat with Custom Bot Name */}
               <Webchat
                 config={{
                   botName: "DoubtMaster", // Custom bot name
-                  botAvatarUrl: "https://path-to-your-avatar.png", // Set a custom avatar URL here if needed
+                  botAvatarUrl: botAvatar, // Set a custom avatar URL here if needed
                 }}
                 onClose={toggleWebchat} // Close webchat on clicking "X" button
               />
