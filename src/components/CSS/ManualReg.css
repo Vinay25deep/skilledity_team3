@@ -106,14 +106,19 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 77%;
+  width: 100%;
 }
 
-.dob-inputs input {
-  width: 30%;
+.dob {
+  width: 100%;
   padding: 10px;
   border: 1px solid #dee5f8;
+  height:3rem;
   border-radius: 5px;
+}
+
+.dob :placeholder{
+  font-family: "Montserrat";
 }
 
 .gender-options {
