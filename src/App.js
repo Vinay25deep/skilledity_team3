@@ -85,7 +85,7 @@ function App() {
               {/* Webchat with Custom Bot Name */}
               <Webchat
                 config={{
-                  botName: "DoubtMaster", // Custom bot name
+                  botName: "DoubtMaster", 
                   botAvatarUrl: botAvatar, // Set a custom avatar URL here if needed
                 }}
                 onClose={toggleWebchat} // Close webchat on clicking "X" button
