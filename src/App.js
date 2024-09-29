@@ -27,8 +27,8 @@ import { useState } from "react";
 function App() {
   // Botpress Webchat configuration
   const { theme, style } = buildTheme({
-    themeName: "prism", // You can customize the theme
-    themeColor: "#634433", // Customize the color to fit your design
+    themeName: "dark", // Set to dark theme to match your example
+    themeColor: "#202124", // Customize the theme color to dark shades
   });
 
   // Add your actual Botpress client ID here
@@ -37,6 +37,7 @@ function App() {
   const client = getClient({ clientId });
   const [isWebchatOpen, setIsWebchatOpen] = useState(false);
 
+  // Toggles the Webchat visibility
   const toggleWebchat = () => {
     setIsWebchatOpen((prevState) => !prevState);
   };
@@ -67,12 +68,26 @@ function App() {
         </BrowserRouter>
 
         {/* Botpress Webchat Integration */}
-        <div style={{ width: "100vw", height: "100vh" }}>
+        <div style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: 1000 }}>
           <style>{style}</style>
           <WebchatProvider theme={theme} client={client}>
+            {/* Floating Action Button */}
             <Fab onClick={toggleWebchat} />
-            <div style={{ display: isWebchatOpen ? "block" : "none" }}>
-              <Webchat />
+            <div
+              style={{
+                display: isWebchatOpen ? "block" : "none",
+                width: "400px",
+                height: "600px",
+              }}
+            >
+              {/* Webchat with Custom Bot Name */}
+              <Webchat
+                config={{
+                  botName: "DoubtMaster", // Custom bot name
+                  botAvatarUrl: "https://path-to-your-avatar.png", // Set a custom avatar URL here if needed
+                }}
+                onClose={toggleWebchat} // Close webchat on clicking "X" button
+              />
             </div>
           </WebchatProvider>
         </div>
