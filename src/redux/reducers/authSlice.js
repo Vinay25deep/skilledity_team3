@@ -8,7 +8,7 @@ const initialState = {
   section:'sec',
   student_school_fk:'N',
   students: [],
-  authorisation:true
+  authorisation:false
 };
 
 export const authSlice = createSlice({

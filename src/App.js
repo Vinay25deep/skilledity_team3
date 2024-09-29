@@ -66,9 +66,9 @@ function App() {
   };
 
   // Run token check on page load or refresh
-    // useEffect(() => {
-    //   checkToken();
-    // }, []); // Empty dependency array to run only once on mount
+    useEffect(() => {
+       checkToken();
+    }, []); // Empty dependency array to run only once on mount
 
   // PrivateRoute Component to restrict routes
   const PrivateRoute = ({ children }) => {
