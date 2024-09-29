@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import '../CSS/SchoolLoginPage.css'; 
-import BotpressChat from './BotpressChat';
+
 
 
 const AdminLogin = () => {

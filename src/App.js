@@ -18,17 +18,36 @@ import InfoPage from "./components/JS/InfoPage";
 import LandingPage from "./components/JS/LandingPage";
 import AboutUs from "./components/JS/AboutUs";
 import OurTeam from "./components/JS/OurTeam";
-import BotChat from './components/JS/BotChat';
+
+// Importing Botpress Webchat components
+import { Webchat, WebchatProvider, Fab, getClient } from "@botpress/webchat";
+import { buildTheme } from "@botpress/webchat-generator";
+import { useState } from "react";
 
 function App() {
+  // Botpress Webchat configuration
+  const { theme, style } = buildTheme({
+    themeName: "prism", // You can customize the theme
+    themeColor: "#634433", // Customize the color to fit your design
+  });
+
+  // Add your actual Botpress client ID here
+  const clientId = "79ba890d-6153-4c0d-bd58-1f4123ac3a61"; 
+
+  const client = getClient({ clientId });
+  const [isWebchatOpen, setIsWebchatOpen] = useState(false);
+
+  const toggleWebchat = () => {
+    setIsWebchatOpen((prevState) => !prevState);
+  };
+
   return (
     <DataProvider>
-      <BrowserRouter>
-        <div className="App">
+      <div className="App">
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="BotChat" element={<BotChat />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
@@ -42,12 +61,22 @@ function App() {
             <Route path="admin-form" element={<AdminForm />} />
             <Route path="info-page" element={<InfoPage />} />
             <Route path="login" element={<LoginPortal />} />
-            <Route path="about-us" element={<AboutUs/>}/>
-            <Route path="our-team" element={<OurTeam/>}/>
-           
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="our-team" element={<OurTeam />} />
           </Routes>
+        </BrowserRouter>
+
+        {/* Botpress Webchat Integration */}
+        <div style={{ width: "100vw", height: "100vh" }}>
+          <style>{style}</style>
+          <WebchatProvider theme={theme} client={client}>
+            <Fab onClick={toggleWebchat} />
+            <div style={{ display: isWebchatOpen ? "block" : "none" }}>
+              <Webchat />
+            </div>
+          </WebchatProvider>
         </div>
-      </BrowserRouter>
+      </div>
     </DataProvider>
   );
 }
