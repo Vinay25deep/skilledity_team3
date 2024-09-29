@@ -21,11 +21,17 @@ function UploadCSV()
         formData.append('file', file);
     
         try {
-          const response = await axios.post('http://ec2-13-235-68-213.ap-south-1.compute.amazonaws.com:3000/school/upload-csv', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data'
+          const response = await axios.post(
+            'https://api.skilledity.in/school/upload-csv',
+            formData,
+            {
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+              withCredentials: true // Ensure cookies are sent and received
             }
-          });
+          );
+          
           console.log(response)
           // Handle success response
           if (response.data && response.data.success) {

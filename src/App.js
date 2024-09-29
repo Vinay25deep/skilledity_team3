@@ -15,6 +15,9 @@ import StudentOptions from "./components/JS/StudentOptions";
 import AdminLogin from "./components/JS/AdminLogin";
 import AdminForm from "./components/JS/AdminForm";
 import InfoPage from "./components/JS/InfoPage";
+import LandingPage from "./components/JS/LandingPage";
+import AboutUs from "./components/JS/AboutUs";
+import OurTeam from "./components/JS/OurTeam";
 
 function App() {
   return (
@@ -23,7 +26,7 @@ function App() {
         <div className="App">
           <Navbar />
           <Routes>
-            <Route path="/" element={<LoginPortal />} />
+            <Route path="/" element={<LandingPage />} />
             <Route path="school-login" element={<SchoolLoginPage />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="forgot-password" element={<ForgotPasswordPage />} />
@@ -36,6 +39,9 @@ function App() {
             <Route path="admin-login" element={<AdminLogin />} />
             <Route path="admin-form" element={<AdminForm />} />
             <Route path="info-page" element={<InfoPage />} />
+            <Route path="login" element={<LoginPortal />} />
+            <Route path="about-us" element={<AboutUs/>}/>
+            <Route path="our-team" element={<OurTeam/>}/>
            
           </Routes>
         </div>

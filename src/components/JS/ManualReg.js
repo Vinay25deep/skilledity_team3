@@ -3,23 +3,84 @@ import '../CSS/ManualReg.css';
 import Img from '../Other.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
+import axios from 'axios';
+import { addStudent } from '../../redux/reducers/authSlice';  
+
+
 
 function Register() {
-  const navigate=useNavigate();
-  const [gender, setGender] = useState('');
+  const Section = useSelector((state) => state.auth.section);
+  const Class = useSelector((state) => state.auth.std_class);
+  const school_id = useSelector((state) => state.auth.school_id);
+  const dispatch = useDispatch();
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    dob: '',
+    std_class: Class,
+    section: Section,
+    contact_no: '',
+    student_id: '',
+    father_name: '',
+    gender: '',
+    email: '',
+    student_school_fk: school_id
+  });
+  const navigate = useNavigate();
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [year, setYear] = useState('');
   const [error, setError] = useState('');
 
-  const handleGenderSelection = (value) => {
-    setGender(value);
-    setError(''); 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); 
+  const handleGenderSelection = (value) => {
+    setFormData({ ...formData, gender: value  });
+    setError('');
+  };
 
+  const handleDateChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'day') setDay(value);
+    if (name === 'month') setMonth(value);
+    if (name === 'year') setYear(value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formattedDOB = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+    setFormData((prevData) => ({ ...prevData, dob: formattedDOB }));
+
+    const { gender } = formData;
     if (!gender) {
       setError('Please select a gender.');
       return;
+    }
+    console.log(formData);
+
+    try {
+      const response = await axios.post(
+        'https://api.skilledity.in/school/register-student',
+        formData,
+        {
+          withCredentials: true, // Ensures cookies are sent and received
+        }
+      );
+      console.log(response.data); // Handle success response
+      if(response.status === 200 && response.data.success){
+        dispatch(addStudent(formData.name));
+        navigate('/manual-register-students');
+      }
+      else{
+        setError('Registration failed');
+      }
+    } catch (error) {
+      console.error('There was an error submitting the form!', error); // Handle error response
     }
   };
 
@@ -38,7 +99,9 @@ function Register() {
               <label>Name</label>
               <input
                 type="text"
+                name="name"
                 placeholder="Enter the Student's full name"
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -57,6 +120,7 @@ function Register() {
                   placeholder="DD"
                   min="1"
                   max="31"
+                  onChange={handleDateChange}
                   required
                 />
                 <input
@@ -64,6 +128,7 @@ function Register() {
                   placeholder="MM"
                   min="1"
                   max="12"
+                  onChange={handleDateChange}
                   required
                 />
                 <input
@@ -71,6 +136,7 @@ function Register() {
                   placeholder="YYYY"
                   min="1900"
                   max={new Date().getFullYear()}
+                  onChange={handleDateChange}
                   required
                 />
               </div>
@@ -79,7 +145,9 @@ function Register() {
               <label>Contact No.</label>
               <input
                 type="tel"
+                name="contact_no"
                 placeholder="Enter Student phone number"
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -87,7 +155,9 @@ function Register() {
               <label>School Admission No.</label>
               <input
                 type="text"
+                name="student_id"
                 placeholder="Enter Student Registration No."
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -98,7 +168,9 @@ function Register() {
               <label>Father's Name</label>
               <input
                 type="text"
+                name="father_name"
                 placeholder="Enter the Student's Father's Name"
+                onChange={handleInputChange}
                 required
               />
             </div>
@@ -107,7 +179,7 @@ function Register() {
               <div className="gender-options">
                 <button
                   type="button"
-                  className={`gender-button ${gender === 'Male' ? 'selected' : ''}`}
+                  className={`gender-button ${formData.gender === 'Male' ? 'selected' : ''}`}
                   onClick={() => handleGenderSelection('Male')}
                 >
                   <div className="gender-icon">
@@ -119,7 +191,7 @@ function Register() {
                 </button>
                 <button
                   type="button"
-                  className={`gender-button ${gender === 'Female' ? 'selected' : ''}`}
+                  className={`gender-button ${formData.gender === 'Female' ? 'selected' : ''}`}
                   onClick={() => handleGenderSelection('Female')}
                 >
                   <div className="gender-icon">
@@ -131,7 +203,7 @@ function Register() {
                 </button>
                 <button
                   type="button"
-                  className={`gender-button ${gender === 'Other' ? 'selected' : ''}`}
+                  className={`gender-button ${formData.gender === 'Other' ? 'selected' : ''}`}
                   onClick={() => handleGenderSelection('Other')}
                 >
                   <div className="gender-icon">
@@ -140,7 +212,7 @@ function Register() {
                   <span>Other</span>
                 </button>
               </div>
-              <input type="hidden" name="gender" id="gender-input" value={gender} required />
+              <input type="hidden" name="gender" id="gender-input" value={formData.gender} required />
               {error && <div className="error-message">{error}</div>} 
             </div>
             <div className="input-field">
@@ -148,13 +220,14 @@ function Register() {
               <input
                 type="email"
                 placeholder="Enter Student Email Address"
+                onChange={handleInputChange}
                 required
               />
             </div>
           </div>
         </div>
 
-        <button id="b1-btn"className="b1" onClick={() => navigate('/manual-register-students')}> <span class="text">Proceed</span></button>
+        <button id="b1-btn"className="b1" onClick={handleSubmit}> <span class="text">Proceed</span></button>
       </form>
     </div>
   );
