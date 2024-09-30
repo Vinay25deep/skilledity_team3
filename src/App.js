@@ -95,6 +95,8 @@ function App() {
         </div>
       </div>
     </DataProvider>
+  );
+}
 import { useDispatch } from 'react-redux';
 import { setAuth } from './redux/reducers/authSlice';
 import {jwtDecode} from "jwt-decode"; // Fix import if needed
@@ -218,4 +220,3 @@ function App() {
 }
 
 export default App;
-//hy
