@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setSchoolData, setAuth } from '../../redux/reducers/authSlice';
-import { jwtDecode } from 'jwt-decode';
-import Cookies from 'js-cookie';
+import {jwtDecode} from 'jwt-decode'; // Ensure this is the correct import
 import '../CSS/SchoolLoginPage.css';
 
 const SchoolLoginPage = () => {
@@ -14,54 +13,51 @@ const SchoolLoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-   const extractSchoolDataFromToken = (dispatch) => {
-    // Extract token from the cookies
-    const cookies = document.cookie.split('; ').find(row => row.startsWith('jwt='));
-    if (cookies) {
-      const token = cookies.split('=')[1]; // Get JWT token
-  
-      // Decode the token
-      const decodedToken = jwtDecode(token);
-  
-      // Extract schoolname and schoolid from decoded token
-      const { schoolName, schoolId } = decodedToken;
-  
-      // Dispatch school data to the Redux store
-      dispatch(setSchoolData(schoolName, schoolId));
+  // Function to get a specific cookie by name
+  const getCookie = (name) => {
+    const cookies = document.cookie
+      .split("; ")
+      .map(cookie => {
+        console.log('Cookie:', cookie); // Log each cookie for debugging
+        return cookie;
+      })
+      .find(row => row.startsWith(`${name}=`)); // Use template literals for the cookie name
 
-      dispatch(setAuth(true));
-      
-      console.log('Cookie token:', token);
-    } else {
-      console.error('JWT token not found in cookies.');
+    return cookies ? cookies.split("=")[1] : null; // Return the value of the cookie
+  };
+
+  const checkForToken = (attempts = 5) => {
+    const token = getCookie('jwt'); // Get JWT from the cookie named 'jwt'
+    if (token) {
+      return token; // Return the token if found
+    } else if (attempts > 0) {
+      setTimeout(() => checkForToken(attempts - 1), 500); // Retry after 500 ms
     }
+    return null; // No token found after retries
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://api.skilledity.in/school-login', {
+      await axios.post('https://api.skilledity.in/school-login', {
         email: username,
         password: password,
       }, { 
-        withCredentials: true, // Ensures cookies are sent and received
+        withCredentials: true, // Ensure cookies are sent and received
       });
 
-      if (response.status === 200) {
-        const { schoolName, schoolId } = response.data;
-
-        // Dispatch school data to Redux store
+      // Check for token after login
+      const token = checkForToken();
+      if (token) {
+        const tokenInfo = jwtDecode(token); // Decode the token
+        const { schoolName, schoolId } = tokenInfo; // Extract data from the token
         dispatch(setSchoolData({ school_name: schoolName, school_id: schoolId }));
-
-        // Retrieve the token or session data from the cookie
-          // Extract and store school data from JWT token in Redux store
-          extractSchoolDataFromToken(dispatch);
-
-        console.log('Login response:', response); // Check the response for debugging
-
+        dispatch(setAuth(true));
+        navigate('/dashboard'); // Redirect to dashboard
       } else {
-        setError('Invalid username or password');
+        setError('Failed to retrieve token. Please log in again.');
       }
+
     } catch (error) {
       console.error('Error during login:', error);
       setError('An error occurred during login');
@@ -71,7 +67,7 @@ const SchoolLoginPage = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h1>Welcome!</h1>  
+        <h1>Welcome!</h1>
         <h3>Sign in to</h3>
         <p> the School Login portal</p>
         <form className="container" onSubmit={handleLogin}> 

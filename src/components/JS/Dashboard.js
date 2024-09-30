@@ -2,7 +2,6 @@ import React from 'react';
 import {  useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import '../CSS/Dashboard.css';
-import Cookies from 'js-cookie'
 
 function Dashboard() {
   const navigate = useNavigate();

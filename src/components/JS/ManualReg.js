@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';  // Import useDispatch to dispatch Redux actions
 import axios from 'axios';
 import { addStudent } from '../../redux/reducers/authSlice';  
-
+import { DatePicker } from "antd";
 
 
 function Register() {
@@ -44,11 +44,8 @@ function Register() {
     setError('');
   };
 
-  const handleDateChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'day') setDay(value);
-    if (name === 'month') setMonth(value);
-    if (name === 'year') setYear(value);
+  const handleDateChange = (date, dateString) => {
+    setFormData({ ...formData, dob: dateString });
   };
 
   const handleSubmit = async (event) => {
@@ -114,32 +111,7 @@ function Register() {
                   </g>
                 </svg>
               </label>
-              <div className="dob-inputs">
-                <input
-                  type="number"
-                  placeholder="DD"
-                  min="1"
-                  max="31"
-                  onChange={handleDateChange}
-                  required
-                />
-                <input
-                  type="number"
-                  placeholder="MM"
-                  min="1"
-                  max="12"
-                  onChange={handleDateChange}
-                  required
-                />
-                <input
-                  type="number"
-                  placeholder="YYYY"
-                  min="1900"
-                  max={new Date().getFullYear()}
-                  onChange={handleDateChange}
-                  required
-                />
-              </div>
+                <DatePicker className="dob" name='dob' onChange={handleDateChange} placeholder="Select date of birth" />
             </div>
             <div className="input-field">
               <label>Contact No.</label>
